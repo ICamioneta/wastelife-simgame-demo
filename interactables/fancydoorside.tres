@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ddf4e14s58rgr"]
+
+[ext_resource type="Texture2D" uid="uid://cuc2ey7ns2ine" path="res://assets/sprites/fancydoorside.png" id="1_dbsar"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxdl0"]
+atlas = ExtResource("1_dbsar")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2jhh"]
+atlas = ExtResource("1_dbsar")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmd2e"]
+atlas = ExtResource("1_dbsar")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dclbt"]
+atlas = ExtResource("1_dbsar")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxdl0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2jhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmd2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dclbt")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfw7650klv2oj"]
+
+[ext_resource type="Script" path="res://script/door.cs" id="1_wewy5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gs0f"]
+size = Vector2(15, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy7r0"]
+size = Vector2(11, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8tci"]
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_wewy5")
+
+[node name="doorCollision" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 23.5)
+shape = SubResource("RectangleShape2D_4gs0f")
+
+[node name="ActivationArea" type="Area2D" parent="."]
+
+[node name="ActivationShape" type="CollisionShape2D" parent="ActivationArea"]
+position = Vector2(16.5, 20.5)
+shape = SubResource("RectangleShape2D_uy7r0")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_w8tci")

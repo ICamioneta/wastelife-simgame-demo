@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://df56my2o4ntg0"]
+
+[ext_resource type="Texture2D" uid="uid://cgfaag7ymnig7" path="res://assets/sprites/fancydoor.png" id="1_gk3o4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppevh"]
+atlas = ExtResource("1_gk3o4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjqx7"]
+atlas = ExtResource("1_gk3o4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p15dx"]
+atlas = ExtResource("1_gk3o4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ou8"]
+atlas = ExtResource("1_gk3o4")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppevh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjqx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p15dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ou8")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]

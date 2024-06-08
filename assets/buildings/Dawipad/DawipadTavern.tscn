@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7q0fvf1qtk4v"]
+[gd_scene load_steps=15 format=3 uid="uid://b7q0fvf1qtk4v"]
 
 [ext_resource type="TileSet" uid="uid://bvc21ty2micjt" path="res://assets/tilesets/modernbuildingexterior.tres" id="1_4iptf"]
 [ext_resource type="TileSet" uid="uid://c4xwckg8jip8u" path="res://assets/tilesets/modernindoors.tres" id="2_xtl5g"]
 [ext_resource type="PackedScene" uid="uid://c72wnf4f7pwtj" path="res://interactables/DoorSide.tscn" id="3_mwqrc"]
 [ext_resource type="SpriteFrames" uid="uid://ddf4e14s58rgr" path="res://interactables/fancydoorside.tres" id="4_qqfpf"]
 [ext_resource type="Script" path="res://script/buildingEnter.cs" id="5_g5n7i"]
-[ext_resource type="PackedScene" uid="uid://sctg7wn30wll" path="res://interactables/stairs.tscn" id="6_xuj4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u2fb"]
 size = Vector2(3, 45)
@@ -38,7 +37,6 @@ size = Vector2(96, 120)
 script = ExtResource("5_g5n7i")
 
 [node name="BuildingExterior" type="TileMap" parent="."]
-visible = false
 tile_set = ExtResource("1_4iptf")
 format = 2
 layer_0/name = "Base"
@@ -76,6 +74,7 @@ layer_1/z_index = 160
 layer_1/tile_data = PackedInt32Array(458752, 1, 0, 458753, 65537, 0, 458754, 65537, 0, 458755, 131073, 0, 262150, 131073, 0, 262149, 65537, 0, 262148, 65537, 0, 262147, 196609, 0)
 
 [node name="BaseCollision" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="luwall" type="CollisionShape2D" parent="BaseCollision"]
 position = Vector2(4.5, 83.5)
@@ -106,6 +105,7 @@ position = Vector2(111.5, 62.5)
 shape = SubResource("RectangleShape2D_d1cdq")
 
 [node name="Floor2Collision" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(0, -32)
 collision_layer = 6
 collision_mask = 6
@@ -139,11 +139,13 @@ position = Vector2(111.5, 62.5)
 shape = SubResource("RectangleShape2D_d1cdq")
 
 [node name="Door" parent="." instance=ExtResource("3_mwqrc")]
+visible = false
 z_index = 60
 position = Vector2(0, 95)
 DoorAnimation = ExtResource("4_qqfpf")
 
 [node name="Inside" type="Area2D" parent="."]
+visible = false
 collision_layer = 3
 collision_mask = 3
 
@@ -156,18 +158,17 @@ position = Vector2(169, 124)
 shape = SubResource("RectangleShape2D_ft62l")
 
 [node name="Inside2" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, -32)
 collision_layer = 6
 collision_mask = 6
 
 [node name="shape1" type="CollisionShape2D" parent="Inside2"]
+visible = false
 position = Vector2(63.5, 172)
 shape = SubResource("RectangleShape2D_8bw7c")
 
 [node name="shape2" type="CollisionShape2D" parent="Inside2"]
+visible = false
 position = Vector2(169, 124)
 shape = SubResource("RectangleShape2D_ft62l")
-
-[node name="Stairs" parent="." instance=ExtResource("6_xuj4w")]
-z_index = 35
-position = Vector2(128, 45)

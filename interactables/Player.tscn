@@ -279,7 +279,8 @@ animations = [{
 size = Vector2(8, 8)
 
 [node name="Player" type="RigidBody2D"]
-z_index = 150
+z_index = 400
+y_sort_enabled = true
 physics_material_override = ExtResource("1_3372m")
 gravity_scale = 0.0
 lock_rotation = true
@@ -290,6 +291,7 @@ position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_klf0c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_c21d8")
 animation = &"idle"
 frame = 1

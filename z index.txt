@@ -1,0 +1,26 @@
+z index is a 1-999 scale because I'm familiar with that from Barotrauma of all places
+
+000-099 : undesignated background
+100-139 : building floors
+140     : building side wall detail
+141	: building top (and bottom) wall detail
+142-149 : other wall detail
+150-159 : building exterior
+160-169 : building exterior details
+170-199 : undesignated; probably for other exterior floors and exterior floor details
+200-203 : roof back
+204-207 : roof side
+208-211 : roof front
+212-249 : roof detail & other roof stuff if needed
+250-299 : static environment elements
+300-309 : doors
+310-399 : interactable 
+400-449	: NPCs and player character layers, the person layer
+450-500 : other interactables, presumably caravans and stuff
+500-699 : foreground
+500-503 : roof back
+504-507 : roof side
+508-511 : roof front
+512-539 : roof detail
+
+700-999 : UI elements

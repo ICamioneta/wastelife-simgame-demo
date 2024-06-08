@@ -1,28 +1,34 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfw7650klv2oj"]
 
 [ext_resource type="Script" path="res://script/door.cs" id="1_wewy5"]
+[ext_resource type="SpriteFrames" uid="uid://3a04645s5v4g" path="res://assets/sprites/fancydoorspriteframes.tres" id="2_b5jot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gs0f"]
-size = Vector2(15, 3)
+size = Vector2(16, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy7r0"]
-size = Vector2(11, 17)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_w8tci"]
+size = Vector2(16, 17)
 
 [node name="Door" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_wewy5")
 
 [node name="doorCollision" type="CollisionShape2D" parent="."]
-position = Vector2(16.5, 23.5)
+z_index = 1
+position = Vector2(16, 31)
 shape = SubResource("RectangleShape2D_4gs0f")
 
 [node name="ActivationArea" type="Area2D" parent="."]
 
 [node name="ActivationShape" type="CollisionShape2D" parent="ActivationArea"]
-position = Vector2(16.5, 20.5)
+z_index = 1
+position = Vector2(16, 27.5)
 shape = SubResource("RectangleShape2D_uy7r0")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+z_index = 300
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(16, 16)
-sprite_frames = SubResource("SpriteFrames_w8tci")
+sprite_frames = ExtResource("2_b5jot")
+animation = &"open"

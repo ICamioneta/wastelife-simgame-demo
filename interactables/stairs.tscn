@@ -45,7 +45,6 @@ position = Vector2(10.5, 23.5)
 shape = SubResource("RectangleShape2D_444nl")
 
 [node name="sprite" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(16, 16)
 texture = ExtResource("1_8a3l1")
 

@@ -1,0 +1,13 @@
+I need to prepare a proper building tileset template. I'm going to completely change how I do buildings.
+Each building type needs a strictly defined tileset layout that accounts for all possibilities that a building would need. If I change a tileset, i'll have to remap the resource.
+
+So what tiles do I need.
+Firstly, i'm going to use the full 32 pixels rather than use the 4 pixel space for overhangs and other details. This is to give the characters more space, and to hopefully make parts of the tileset mutable.
+
+Every building tileset will follow a particular style. I'm going to make one for the development of the map with the idea that I can make each of the towns and areas unique with unique tilesets later. The one I've created already suits a 1750s style house with a layed brick ground floor and a wooden upper floor, also having a wooden lower floor. I'm not sure if this will be used on any of the town's buildings in the future but it makes for a good template for the setting.
+
+There are shape tiles, and then there is the style of tile. Every style will need every shape, and the tilesheet should be organised by style.
+
+I'm also going to harden the corners of buildings
+
+The basic building tilesheet has 2 main styles: brick stone, and a sort of tudoresque wood and clay. these are styles of wall. Each style of wall needs tiles with and without windows, as well as a front / back door.

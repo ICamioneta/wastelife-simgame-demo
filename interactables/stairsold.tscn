@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://sctg7wn30wll"]
+
+[ext_resource type="Script" path="res://script/stairs.cs" id="1_b6jcb"]
+[ext_resource type="Texture2D" uid="uid://wl5u0vmqvcm2" path="res://assets/sprites/staris.png" id="2_ayhe7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvnwh"]
+size = Vector2(25.4558, 14.8492)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwguv"]
+size = Vector2(10.75, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_444nl"]
+size = Vector2(19, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aeog"]
+size = Vector2(25.4558, 1.41421)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcy2x"]
+size = Vector2(26.163, 1.70711)
+
+[node name="StairsOld" type="Node2D"]
+script = ExtResource("1_b6jcb")
+
+[node name="indetect" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="middle" type="CollisionShape2D" parent="indetect"]
+position = Vector2(10.75, 13.75)
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_yvnwh")
+
+[node name="lower" type="CollisionShape2D" parent="indetect"]
+position = Vector2(1.375, 23)
+shape = SubResource("RectangleShape2D_hwguv")
+
+[node name="upper" type="CollisionShape2D" parent="indetect"]
+position = Vector2(20, 6)
+shape = SubResource("RectangleShape2D_hwguv")
+
+[node name="floor1collision" type="StaticBody2D" parent="."]
+
+[node name="shape" type="CollisionShape2D" parent="floor1collision"]
+position = Vector2(10.5, 23.5)
+shape = SubResource("RectangleShape2D_444nl")
+
+[node name="sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16, 16)
+texture = ExtResource("2_ayhe7")
+
+[node name="transitioncollission" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="top" type="CollisionShape2D" parent="transitioncollission"]
+position = Vector2(9, 4)
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_6aeog")
+
+[node name="bottom" type="CollisionShape2D" parent="transitioncollission"]
+position = Vector2(10, 26)
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_bcy2x")

@@ -27,6 +27,7 @@ size = Vector2(128, 61)
 script = ExtResource("4_vdsuo")
 
 [node name="BuildingExterior" type="TileMap" parent="."]
+visible = false
 y_sort_enabled = true
 tile_set = ExtResource("2_ofmls")
 format = 2

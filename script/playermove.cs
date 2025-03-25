@@ -3,7 +3,8 @@ using System;
 
 public partial class playermove : RigidBody2D
 {
-	public int speed = 100;
+	public int speed = 50;
+	int accel = 5;
 	private AnimatedSprite2D sprite;
 	// Called when the node enters the scene tree for the first time.	
 	public override void _Ready()
@@ -11,38 +12,51 @@ public partial class playermove : RigidBody2D
 		sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public override void _IntegrateForces(PhysicsDirectBodyState2D state)
 	{
-		Vector2 velocity = new Vector2();
+		Vector2 targetVelocity = new Vector2();
+
 		if (Input.IsActionPressed("p_right"))
 		{
-			velocity.X += 1;
+			targetVelocity.X += 1;
 		}
 		if (Input.IsActionPressed("p_left"))
 		{
-			velocity.X -= 1;
+			targetVelocity.X -= 1;
 		}
 		if (Input.IsActionPressed("p_down"))
 		{
-			velocity.Y += 1;
+			targetVelocity.Y += 1;
 		}
 		if (Input.IsActionPressed("p_up"))
 		{
-			velocity.Y -= 1;
+			targetVelocity.Y -= 1;
 		}
-		
+
+		// Normalize the target velocity and scale it by speed
 		if (Input.IsActionPressed("p_run"))
 		{
-			velocity = velocity.Normalized() * (speed * 2);
-		} else
-		{
-			velocity = velocity.Normalized() * speed;
+			targetVelocity = targetVelocity.Normalized() * (speed * 2);
 		}
+		else
+		{
+			targetVelocity = targetVelocity.Normalized() * speed;
+		}
+
+		// Calculate the force needed to reach the target velocity
+		Vector2 currentVelocity = state.LinearVelocity;
+		Vector2 force = (targetVelocity - currentVelocity) * accel;
+
+		// Apply the force to the body
+		state.ApplyForce(force);
+	}
+	
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+		var velocity = this.LinearVelocity;
 		
-		this.LinearVelocity = velocity;
-		
-		if (velocity.IsZeroApprox())
+		if (Math.Abs(velocity.X) < 25 && Math.Abs(velocity.Y) < 25)
 		{
 			sprite.Pause();
 		} else 

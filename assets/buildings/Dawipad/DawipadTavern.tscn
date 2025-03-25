@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://b7q0fvf1qtk4v"]
+[gd_scene load_steps=15 format=4 uid="uid://b7q0fvf1qtk4v"]
 
 [ext_resource type="TileSet" uid="uid://cxr8gmrkpih5j" path="res://assets/tilesets/limestonebuilding.tres" id="2_os8oc"]
 [ext_resource type="PackedScene" uid="uid://c72wnf4f7pwtj" path="res://interactables/DoorSide.tscn" id="3_mwqrc"]
+[ext_resource type="PackedScene" uid="uid://8dt6xgeovapo" path="res://interactables/Stairs.tscn" id="3_ss5e5"]
 [ext_resource type="SpriteFrames" uid="uid://ddf4e14s58rgr" path="res://interactables/fancydoorside.tres" id="4_qqfpf"]
-[ext_resource type="Script" path="res://script/buildingEnter.cs" id="5_g5n7i"]
+[ext_resource type="Script" path="res://script/building.cs" id="5_g5n7i"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u2fb"]
-size = Vector2(3, 60)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4trb"]
+size = Vector2(3, 40)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0w2na"]
-size = Vector2(3, 163.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aulb0"]
+size = Vector2(3, 133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hor22"]
 size = Vector2(96, 3)
@@ -21,93 +22,88 @@ size = Vector2(3, 96)
 size = Vector2(128, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qi188"]
-size = Vector2(3, 128)
+size = Vector2(3, 93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1cdq"]
-size = Vector2(218, 3)
+size = Vector2(224, 3.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bw7c"]
-size = Vector2(90, 221)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u2fb"]
+size = Vector2(3, 41)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft62l"]
-size = Vector2(128, 124)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0w2na"]
+size = Vector2(3, 148.375)
 
 [node name="DawipadTavern" type="Node2D"]
 script = ExtResource("5_g5n7i")
 
-[node name="BuildingExterior" type="TileMap" parent="."]
-visible = false
-tile_set = ExtResource("2_os8oc")
-format = 2
-layer_0/name = "Floor1"
-layer_0/z_index = 151
-layer_0/tile_data = PackedInt32Array(524288, 0, 4, 524289, 0, 4, 524290, 0, 4, 327683, 0, 4, 327684, 0, 4, 327685, 0, 4, 327686, 0, 4)
-layer_1/name = "Floor 1 detail"
-layer_1/z_index = 160
-layer_1/tile_data = PackedInt32Array(524288, 65536, 5, 524289, 65536, 5, 524290, 65536, 5, 327683, 65536, 5, 327684, 65536, 5, 327685, 65536, 5, 327686, 65536, 5)
-layer_2/name = "Floor 1 detail 2"
-layer_2/z_index = 161
-layer_2/tile_data = PackedInt32Array(524288, 0, 5, 524290, 0, 268435461, 327686, 0, 268435461)
-layer_3/name = "Floor2"
-layer_3/z_index = 152
-layer_3/tile_data = PackedInt32Array(458752, 327680, 4, 458755, 196608, 4, 458753, 393216, 4, 458754, 327680, 4, 262147, 393216, 4, 262148, 327680, 4, 262149, 393216, 4, 262150, 327680, 4)
-layer_4/name = "Floor 2 detail"
-layer_4/z_index = 161
-layer_4/tile_data = PackedInt32Array(458755, 262144, 5, 524287, 262144, 268435461, 262151, 262144, 5)
-layer_5/name = "Roof Back"
-layer_5/z_index = 200
-layer_5/tile_data = PackedInt32Array(196609, 65536, 0, 262145, 65536, 0, 327681, 65536, 0, 1, 65536, 0, 65537, 65536, 0, 131073, 65536, 0, 2, 65536, 0, 65538, 65536, 0, 131074, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 131075, 65536, 0, 131076, 65536, 0, 131077, 65536, 0, 65541, 65536, 0, 65540, 65536, 0, 65539, 65536, 0, 196610, 65536, 3)
-layer_6/name = "Roof Sides"
-layer_6/z_index = 204
-layer_6/tile_data = PackedInt32Array(65536, 0, 2, 131072, 0, 2, 196608, 0, 2, 262144, 0, 2, 327680, 0, 2, 393216, 0, 2, 0, 0, 1, 6, 0, 268435457, 65542, 0, 268435458, 131078, 0, 268435458, 196614, 0, 268435458, 262146, 0, 268435458, 327682, 0, 268435458, 393218, 0, 268435458, 196610, 0, 268435457)
-layer_7/name = "Roof Front"
-layer_7/z_index = 208
-layer_7/tile_data = PackedInt32Array(393216, 0, 3, 393218, 196608, 3, 393217, 65536, 3, 196611, 65536, 3, 196612, 65536, 3, 196613, 65536, 3, 196614, 196608, 3)
-layer_8/name = "Roof detail"
-layer_8/z_index = 512
-layer_8/tile_data = PackedInt32Array(327681, 65536, 2, 262145, 65536, 1, 196609, 65536, 1, 131073, 65536, 1, 65537, 65536, 1, 2, 65536, 1342177281, 3, 65536, 1342177281, 4, 65536, 1342177281, 65541, 65536, 805306369, 131077, 65536, 1610612738, 131074, 65536, 1610612737, 131075, 65536, 1610612737, 131076, 65536, 1610612737, 5, 65536, 805306370, 1, 65536, 1342177282)
-layer_9/name = "Roof detail 2"
-layer_9/z_index = 513
-layer_9/tile_data = PackedInt32Array(327681, 65536, 1610612738, 262145, 65536, 805306369, 196609, 65536, 805306369, 131071, 65536, 805306369, 196607, 65536, 805306369, 262143, 65536, 805306369, 327679, 65536, 805306369, 393215, 65536, 805306369, 458751, 65536, 805306369, 393219, 65536, 1, 327683, 65536, 1, 262147, 65536, 1, 196615, 65536, 1, 131079, 65536, 1, 65543, 65536, 1)
+[node name="Floor0" type="Node2D" parent="."]
+position = Vector2(0, -96)
 
-[node name="Floor1" type="TileMap" parent="."]
-visible = false
+[node name="Floor0Base" type="TileMapLayer" parent="Floor0"]
+tile_map_data = PackedByteArray("AAAAAAgAAAAFAAAAAAABAAgAAAAFAAAAAAACAAgAAAAFAAAAAAACAAcAAAAFAAAAAAABAAcAAAAFAAAAAAAAAAcAAAAFAAAAAAAAAAYAAAAFAAAAAAABAAYAAAAFAAAAAAACAAYAAAAFAAAAAAACAAUAAAAFAAAAAAABAAUAAAAFAAAAAAAAAAUAAAAFAAAAAAADAAUAAAAFAAAAAAAEAAUAAAAFAAAAAAAFAAUAAAAFAAAAAAAGAAUAAAAFAAAAAAAGAAQAAAAFAAAAAAAGAAMAAAAFAAAAAAAFAAMAAAAFAAAAAAAEAAMAAAAFAAAAAAADAAMAAAAFAAAAAAACAAMAAAAFAAAAAAABAAMAAAAFAAAAAAAAAAMAAAAFAAAAAAAAAAQAAAAFAAAAAAABAAQAAAAFAAAAAAACAAQAAAAFAAAAAAADAAQAAAAFAAAAAAAEAAQAAAAFAAAAAAAFAAQAAAAFAAAAAAAAAAIAAAAAAAQAAAABAAIAAAAAAAQAAAACAAIAAAAAAAQAAAADAAIAAAAAAAQAAAAEAAIAAAAAAAQAAAAFAAIAAAAAAAQAAAAGAAIAAAAAAAQAAAA=")
 tile_set = ExtResource("2_os8oc")
-format = 2
-layer_0/name = "Floor"
-layer_0/z_index = 100
-layer_0/tile_data = PackedInt32Array(524288, 327680, 0, 524289, 327680, 0, 524290, 327680, 0, 458752, 327680, 0, 393216, 327680, 0, 327680, 327680, 0, 262144, 327680, 0, 196608, 327680, 0, 131072, 327680, 0, 65536, 0, 4, 65542, 0, 4, 327686, 327680, 0, 327685, 327680, 0, 327684, 327680, 0, 327683, 327680, 0, 393218, 327680, 0, 458754, 327680, 0, 327682, 327680, 0, 393217, 327680, 0, 458753, 327680, 0, 327681, 327680, 0, 262145, 327680, 0, 262146, 327680, 0, 262147, 327680, 0, 262148, 327680, 0, 262149, 327680, 0, 196613, 327680, 0, 131077, 327680, 0, 131076, 327680, 0, 131075, 327680, 0, 131074, 327680, 0, 196609, 327680, 0, 196610, 327680, 0, 196611, 327680, 0, 196612, 327680, 0, 131073, 327680, 0, 65537, 0, 4, 65538, 0, 4, 65539, 0, 4, 65540, 0, 4, 65541, 0, 4, 131078, 327680, 0, 196614, 327680, 0, 262150, 327680, 0)
-layer_1/name = "Wall Side"
-layer_1/z_index = 140
-layer_1/tile_data = PackedInt32Array(524288, 262144, 805306368, 524290, 262144, 0, 327686, 262144, 536870912, 458752, 262144, 805306368, 393216, 262144, 805306368, 327680, 262144, 805306368, 65536, 262144, 805306368, 131072, 262144, 805306368, 196608, 262144, 805306368, 262144, 262144, 805306368, 327682, 262144, 536870912, 393218, 262144, 536870912, 458754, 262144, 536870912, 262150, 262144, 536870912, 196614, 262144, 536870912, 131078, 262144, 536870912, 65542, 262144, 536870912)
-layer_2/name = "Wall Top"
-layer_2/z_index = 141
-layer_2/tile_data = PackedInt32Array(327686, 393216, 0, 327685, 393216, 0, 327684, 393216, 0, 327683, 393216, 0, 524290, 393216, 0, 524289, 393216, 0, 524288, 393216, 0, 65536, 458752, 0, 65537, 458752, 0, 65538, 458752, 0, 65539, 458752, 0, 65540, 458752, 0, 65541, 458752, 0, 65542, 458752, 0)
 
-[node name="Floor2" type="TileMap" parent="."]
+[node name="Floor0Detail1" type="TileMapLayer" parent="Floor0"]
+tile_map_data = PackedByteArray("AAAAAAgAAAAGAAAAAAABAAgAAAAGAAAAAAACAAgAAAAGAAAAAAADAAUAAAAGAAAAAAAEAAUAAAAGAAAAAAAFAAUAAAAGAAAAAAAGAAUAAAAGAAAAAAAAAAIAAAAHAAAAAAABAAIAAAAHAAAAAAACAAIAAAAHAAAAAAADAAIAAAAHAAAAAAAEAAIAAAAHAAAAAAAFAAIAAAAHAAAAAAAGAAIAAAAHAAAAAAA=")
 tile_set = ExtResource("2_os8oc")
-format = 2
-layer_0/name = "Floor"
-layer_0/z_index = 100
-layer_0/tile_data = PackedInt32Array(393216, 327680, 0, 327680, 327680, 0, 0, 327680, 4, 262144, 327680, 0, 196608, 327680, 0, 131072, 327680, 0, 65536, 327680, 0, 1, 393216, 4, 2, 327680, 4, 3, 393216, 4, 4, 327680, 4, 5, 393216, 4, 6, 327680, 4, 65542, 327680, 0, 131078, 327680, 0, 196614, 327680, 0, 262150, 327680, 0, 262149, 327680, 0, 262148, 327680, 0, 262147, 327680, 0, 393217, 327680, 0, 393218, 327680, 0, 327682, 327680, 0, 327681, 327680, 0, 262145, 327680, 0, 196609, 327680, 0, 196610, 327680, 0, 262146, 327680, 0, 131074, 327680, 0, 65538, 327680, 0, 65537, 327680, 0, 131073, 327680, 0, 131075, 327680, 0, 65539, 327680, 0, 131076, 327680, 0, 131077, 327680, 0, 65541, 327680, 0, 196612, 327680, 0, 196611, 327680, 0, 196613, 327680, 0, 458752, 327680, 0, 458753, 327680, 0, 458754, 327680, 0)
-layer_1/name = "Wall Side"
-layer_1/z_index = 140
-layer_1/tile_data = PackedInt32Array(458752, 262144, 268435456, 458754, 262144, 0, 262150, 262144, 0, 196614, 262144, 0, 131078, 262144, 0, 65542, 262144, 0, 6, 262144, 0, 393216, 262144, 268435456, 327680, 262144, 268435456, 262144, 262144, 268435456, 196608, 262144, 268435456, 131072, 262144, 268435456, 65536, 262144, 268435456, 0, 262144, 268435456, 393218, 262144, 0, 327682, 262144, 0, 262146, 262144, 0)
-layer_2/name = "Wall Top"
-layer_2/z_index = 141
-layer_2/tile_data = PackedInt32Array(0, 458752, 0, 1, 458752, 0, 2, 458752, 0, 3, 458752, 0, 4, 458752, 0, 5, 458752, 0, 6, 458752, 0, 458752, 393216, 0, 458753, 393216, 0, 458754, 393216, 0, 262147, 393216, 0, 262148, 393216, 0, 262149, 393216, 0, 262150, 393216, 0)
+
+[node name="Floor0Detail2" type="TileMapLayer" parent="Floor0"]
+tile_map_data = PackedByteArray("AAAGAAIAAAAEAAAAAAAGAAMAAAAEAAAAAAAGAAQAAAAEAAAAAAAGAAUAAAAEAAAAAAAAAAIAAAAEAAAAABAAAAMAAAAEAAAAABAAAAQAAAAEAAAAABAAAAUAAAAEAAAAABAAAAYAAAAEAAAAABAAAAcAAAAEAAAAABAAAAgAAAAEAAAAABACAAgAAAAEAAAAAAACAAcAAAAEAAAAAAACAAYAAAAEAAAAAAACAAUAAAAEAAAAAAA=")
+tile_set = ExtResource("2_os8oc")
+
+[node name="Stairs" parent="Floor0" instance=ExtResource("3_ss5e5")]
+position = Vector2(115, 79)
+
+[node name="Door" parent="." instance=ExtResource("3_mwqrc")]
+position = Vector2(-2, 28)
+DoorAnimation = ExtResource("4_qqfpf")
+
+[node name="Floor1" type="Node2D" parent="."]
+position = Vector2(0, -96)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Floor1"]
+tile_map_data = PackedByteArray("AAAAAAgAAAAAAAQAAAABAAgAAAAAAAQAAAACAAgAAAAAAAQAAAADAAUAAAAAAAQAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAAAAcAAAAFAAAAAAABAAcAAAAFAAAAAAACAAcAAAAFAAAAAAACAAYAAAAFAAAAAAABAAYAAAAFAAAAAAAAAAYAAAAFAAAAAAAAAAUAAAAFAAAAAAABAAUAAAAFAAAAAAACAAUAAAAFAAAAAAACAAQAAAAFAAAAAAABAAQAAAAFAAAAAAAAAAQAAAAFAAAAAAADAAQAAAAFAAAAAAAEAAQAAAAFAAAAAAAFAAQAAAAFAAAAAAAGAAQAAAAFAAAAAAAGAAMAAAAFAAAAAAAFAAMAAAAFAAAAAAAEAAMAAAAFAAAAAAADAAMAAAAFAAAAAAACAAMAAAAFAAAAAAABAAMAAAAFAAAAAAAAAAMAAAAFAAAAAAACAAIAAAAFAAAAAAABAAIAAAAFAAAAAAAAAAIAAAAFAAAAAAAFAAIAAAAFAAAAAAAGAAIAAAAFAAAAAAAGAAEAAAAFAAQAAAAEAAEAAAAFAAQAAAACAAEAAAAFAAQAAAAAAAEAAAAFAAQAAAABAAEAAAAGAAQAAAADAAEAAAAGAAQAAAAFAAEAAAAGAAQAAAADAAIAAAAFAAAAAAA=")
+tile_set = ExtResource("2_os8oc")
+
+[node name="BuildingExterior" type="Node2D" parent="."]
+visible = false
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1, -95)
+
+[node name="buildingExteriorRoof" type="TileMapLayer" parent="BuildingExterior"]
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAAAAAYAAAAAAAIAAAAAAAUAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAIAAAAAAAIAAAACAAYAAAAAAAIAABACAAUAAAAAAAIAABACAAQAAAAAAAIAABACAAMAAAABAAMAAAAGAAMAAAAAAAIAABAAAAEAAAAAAAIAAAAGAAEAAAAAAAIAABABAAUAAAABAAAAAAABAAQAAAABAAAAAAABAAMAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAGAAIAAAAAAAIAABAAAAAAAAAAAAEAAAAGAAAAAAAAAAEAABABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAFAAEAAAABAAAAAAAEAAEAAAABAAAAAAADAAEAAAABAAAAAAACAAEAAAABAAAAAAABAAEAAAABAAAAAAA=")
+tile_set = ExtResource("2_os8oc")
+
+[node name="buildingExteriorFront" type="TileMapLayer" parent="BuildingExterior"]
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAAAAAgAAAAAAAQAAAABAAgAAAAAAAQAAAACAAgAAAAAAAQAAAADAAUAAAAAAAQAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAACAAcAAAAFAAQAAAAAAAcAAAAFAAQAAAABAAcAAAAGAAQAAAADAAQAAAAGAAQAAAAEAAQAAAAFAAQAAAAFAAQAAAAGAAQAAAAGAAQAAAAFAAQAAAABAAYAAAABAAMAAAAAAAYAAAAAAAMAAAACAAYAAAADAAMAAAADAAMAAAABAAMAAAAEAAMAAAABAAMAAAAFAAMAAAABAAMAAAAGAAMAAAADAAMAAAACAAMAAAAAAAEAABA=")
+tile_set = ExtResource("2_os8oc")
+
+[node name="buildingExteriorDetail" type="TileMapLayer" parent="BuildingExterior"]
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAABAAUAAAACAAIAAAABAAQAAAACAAEAAAABAAMAAAACAAEAAAABAAIAAAABAAEAAAABAAEAAAABAAEAAAACAAIAAAABAAEAAGADAAIAAAABAAEAAGAEAAIAAAABAAEAAGABAAAAAAABAAIAAFACAAAAAAABAAEAAEADAAAAAAABAAEAAEAEAAAAAAABAAEAAEAFAAEAAAABAAEAABAFAAIAAAABAAIAAGAFAAAAAAABAAIAADAAAAgAAAADAAUAAAABAAgAAAABAAUAAAACAAgAAAAEAAUAAAADAAUAAAABAAUAAAAEAAUAAAABAAUAAAAFAAUAAAABAAUAAAAGAAUAAAAEAAUAAAAAAAcAAAAHAAQAAAACAAcAAAAHAAQAABA=")
+tile_set = ExtResource("2_os8oc")
+
+[node name="buildingExteriorDetail2" type="TileMapLayer" parent="BuildingExterior"]
+z_index = 5
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAADAAYAAAABAAEAAAADAAUAAAABAAEAAAADAAQAAAABAAEAAAAHAAMAAAABAAEAAAAHAAIAAAABAAEAAAAHAAEAAAABAAEAAAD//wYAAAABAAEAABD//wUAAAABAAEAABD//wQAAAABAAEAABD//wMAAAABAAEAABD//wIAAAABAAEAABD//wEAAAABAAEAABAAAAcAAAABAAEAAEABAAcAAAABAAEAAEACAAcAAAABAAEAAEA=")
+tile_set = ExtResource("2_os8oc")
 
 [node name="BaseCollision" type="StaticBody2D" parent="."]
 visible = false
 z_index = 500
+position = Vector2(0, -96)
 
 [node name="luwall" type="CollisionShape2D" parent="BaseCollision"]
-position = Vector2(1.5, 84)
-shape = SubResource("RectangleShape2D_3u2fb")
+position = Vector2(1.5, 115)
+shape = SubResource("RectangleShape2D_q4trb")
 
 [node name="ldwall" type="CollisionShape2D" parent="BaseCollision"]
-position = Vector2(1.5, 203.5)
-shape = SubResource("RectangleShape2D_0w2na")
+position = Vector2(1.5, 218.5)
+shape = SubResource("RectangleShape2D_aulb0")
 
 [node name="dwall" type="CollisionShape2D" parent="BaseCollision"]
 position = Vector2(48, 286.5)
@@ -122,81 +118,44 @@ position = Vector2(160, 190)
 shape = SubResource("RectangleShape2D_vx64a")
 
 [node name="rwall" type="CollisionShape2D" parent="BaseCollision"]
-position = Vector2(222.5, 124.75)
+position = Vector2(222.5, 140.875)
 shape = SubResource("RectangleShape2D_qi188")
 
 [node name="uwall" type="CollisionShape2D" parent="BaseCollision"]
-position = Vector2(112, 62.5)
+position = Vector2(112, 94.75)
 shape = SubResource("RectangleShape2D_d1cdq")
 
-[node name="Floor2Collision" type="StaticBody2D" parent="."]
+[node name="Floor1Collision" type="StaticBody2D" parent="."]
 z_index = 500
 z_as_relative = false
-position = Vector2(0, -32)
-collision_layer = 6
-collision_mask = 6
+position = Vector2(0, -128)
+collision_layer = 4
+collision_mask = 4
 
-[node name="luwall" type="CollisionShape2D" parent="Floor2Collision"]
-position = Vector2(1.5, 91)
+[node name="luwall" type="CollisionShape2D" parent="Floor1Collision"]
+position = Vector2(1.5, 116.5)
 shape = SubResource("RectangleShape2D_3u2fb")
 
-[node name="ldwall" type="CollisionShape2D" parent="Floor2Collision"]
-position = Vector2(1.5, 203.25)
+[node name="ldwall" type="CollisionShape2D" parent="Floor1Collision"]
+position = Vector2(1.5, 210.813)
 shape = SubResource("RectangleShape2D_0w2na")
 
-[node name="dwall" type="CollisionShape2D" parent="Floor2Collision"]
+[node name="dwall" type="CollisionShape2D" parent="Floor1Collision"]
 position = Vector2(48, 286.5)
 shape = SubResource("RectangleShape2D_hor22")
 
-[node name="r2wall" type="CollisionShape2D" parent="Floor2Collision"]
+[node name="r2wall" type="CollisionShape2D" parent="Floor1Collision"]
 position = Vector2(94.5, 237)
 shape = SubResource("RectangleShape2D_nv3ep")
 
-[node name="d2wall" type="CollisionShape2D" parent="Floor2Collision"]
+[node name="d2wall" type="CollisionShape2D" parent="Floor1Collision"]
 position = Vector2(160, 190.5)
 shape = SubResource("RectangleShape2D_vx64a")
 
-[node name="rwall" type="CollisionShape2D" parent="Floor2Collision"]
-position = Vector2(222.5, 125)
+[node name="rwall" type="CollisionShape2D" parent="Floor1Collision"]
+position = Vector2(222.5, 142.5)
 shape = SubResource("RectangleShape2D_qi188")
 
-[node name="uwall" type="CollisionShape2D" parent="Floor2Collision"]
-position = Vector2(112, 62.5)
+[node name="uwall" type="CollisionShape2D" parent="Floor1Collision"]
+position = Vector2(112, 94)
 shape = SubResource("RectangleShape2D_d1cdq")
-
-[node name="Door" parent="." instance=ExtResource("3_mwqrc")]
-visible = false
-z_index = 60
-position = Vector2(0, 95)
-DoorAnimation = ExtResource("4_qqfpf")
-
-[node name="Inside" type="Area2D" parent="."]
-visible = false
-z_index = 500
-collision_layer = 3
-collision_mask = 3
-
-[node name="shape1" type="CollisionShape2D" parent="Inside"]
-position = Vector2(48, 174.5)
-shape = SubResource("RectangleShape2D_8bw7c")
-
-[node name="shape2" type="CollisionShape2D" parent="Inside"]
-position = Vector2(157, 126)
-shape = SubResource("RectangleShape2D_ft62l")
-
-[node name="Inside2" type="Area2D" parent="."]
-visible = false
-z_index = 500
-position = Vector2(0, -32)
-collision_layer = 6
-collision_mask = 6
-
-[node name="shape1" type="CollisionShape2D" parent="Inside2"]
-visible = false
-position = Vector2(63.5, 172)
-shape = SubResource("RectangleShape2D_8bw7c")
-
-[node name="shape2" type="CollisionShape2D" parent="Inside2"]
-visible = false
-position = Vector2(169, 124)
-shape = SubResource("RectangleShape2D_ft62l")

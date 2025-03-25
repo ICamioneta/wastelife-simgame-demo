@@ -1,0 +1,553 @@
+[gd_scene load_steps=128 format=3 uid="uid://3duuxqaruatx"]
+
+[ext_resource type="PackedScene" uid="uid://ch4dpl55hs2yx" path="res://assets/sections/genesisForest.tscn" id="1_0bal6"]
+[ext_resource type="PackedScene" uid="uid://btgxa4lef4nfi" path="res://assets/sections/ews.tscn" id="2_ie17l"]
+[ext_resource type="PackedScene" uid="uid://uprpwuf37826" path="res://assets/sections/nwCodetenWoods.tscn" id="3_iebcr"]
+[ext_resource type="PackedScene" uid="uid://cbxqp7diffhvw" path="res://assets/sections/nCodetenForestry.tscn" id="4_ly2ub"]
+[ext_resource type="PackedScene" uid="uid://bc2h8ftmor015" path="res://assets/sections/ewsForest.tscn" id="5_nmw40"]
+[ext_resource type="PackedScene" uid="uid://5hi1s5h5io32" path="res://assets/sections/wCodetenWoods.tscn" id="6_5ewu3"]
+[ext_resource type="PackedScene" uid="uid://c7fo1mrdvyrh5" path="res://assets/sections/wCodetenForestry.tscn" id="7_ujo5p"]
+[ext_resource type="PackedScene" uid="uid://uhvds8lvjnor" path="res://assets/sections/swCodetenWoods.tscn" id="8_qckn8"]
+[ext_resource type="PackedScene" uid="uid://d235b2o2a7c1y" path="res://assets/sections/wCodeten.tscn" id="9_x5can"]
+[ext_resource type="PackedScene" uid="uid://jkkqewhhdxmp" path="res://assets/sections/nCodetenWoods.tscn" id="10_0jee3"]
+[ext_resource type="PackedScene" uid="uid://cphys4fdlrh8h" path="res://assets/sections/neCodetenWoods.tscn" id="11_eay80"]
+[ext_resource type="PackedScene" uid="uid://cu0sh8hhawwuj" path="res://assets/sections/codeten.tscn" id="12_v25ee"]
+[ext_resource type="PackedScene" uid="uid://mgxqm8wsubql" path="res://assets/sections/sCodeten.tscn" id="13_dlqm6"]
+[ext_resource type="PackedScene" uid="uid://do3hkhygddm6n" path="res://assets/sections/bigWoods.tscn" id="14_wrxcu"]
+[ext_resource type="PackedScene" uid="uid://dilftmgtb3y1c" path="res://assets/sections/wCodetenRoad.tscn" id="15_3g80k"]
+[ext_resource type="PackedScene" uid="uid://dtlxvyjvivaat" path="res://assets/sections/sCodetenForestry.tscn" id="16_joqtr"]
+[ext_resource type="PackedScene" uid="uid://dlxi57f57ol2i" path="res://assets/sections/nForestEdge.tscn" id="17_7hcwf"]
+[ext_resource type="PackedScene" uid="uid://bqfclrlltlt8k" path="res://assets/sections/codetenRoad.tscn" id="18_sg3lt"]
+[ext_resource type="PackedScene" uid="uid://bwnhdipvyxywn" path="res://assets/sections/forestEdge.tscn" id="19_t7g2q"]
+[ext_resource type="PackedScene" uid="uid://b0qpg8ial1pxn" path="res://assets/sections/ironForestEdge.tscn" id="20_560wu"]
+[ext_resource type="PackedScene" uid="uid://bv6rjbfcwrgxe" path="res://assets/sections/sCodetenWoods.tscn" id="21_475sr"]
+[ext_resource type="PackedScene" uid="uid://t8vduy58nvve" path="res://assets/sections/bulgeWoods.tscn" id="22_pbxp6"]
+[ext_resource type="PackedScene" uid="uid://wposlxn7ib4x" path="res://assets/sections/forestWizardWoods.tscn" id="23_b2m1r"]
+[ext_resource type="PackedScene" uid="uid://byvwsa4chmulg" path="res://assets/sections/forestWizard.tscn" id="24_bct8w"]
+[ext_resource type="PackedScene" uid="uid://cywcxj6dh76q7" path="res://assets/sections/sForestEdge.tscn" id="25_rmbox"]
+[ext_resource type="PackedScene" uid="uid://dcmnn8t04natp" path="res://assets/sections/wizardForestEdge.tscn" id="26_a1wq3"]
+[ext_resource type="PackedScene" uid="uid://bih2c20a40ykl" path="res://assets/sections/cornerNField.tscn" id="27_f85aj"]
+[ext_resource type="PackedScene" uid="uid://sfbxuip7n67d" path="res://assets/sections/cornerSField.tscn" id="28_h1q75"]
+[ext_resource type="PackedScene" uid="uid://j4tko426ilvv" path="res://assets/sections/westFieldN.tscn" id="29_kg56u"]
+[ext_resource type="PackedScene" uid="uid://d4lgr5dw8pmaa" path="res://assets/sections/westFieldNC.tscn" id="30_3ln0c"]
+[ext_resource type="PackedScene" uid="uid://cup23a2gwm6vt" path="res://assets/sections/westFieldW.tscn" id="31_22jsd"]
+[ext_resource type="PackedScene" uid="uid://bktrmmfpp0vo1" path="res://assets/sections/wizardField.tscn" id="32_uo101"]
+[ext_resource type="PackedScene" uid="uid://r7f3cab5jt5j" path="res://assets/sections/plainsWizard.tscn" id="33_ebe6k"]
+[ext_resource type="PackedScene" uid="uid://cwbavsekudemo" path="res://assets/sections/westFieldS.tscn" id="34_3wcbv"]
+[ext_resource type="PackedScene" uid="uid://blkqtlnohmovw" path="res://assets/sections/westFieldSW.tscn" id="35_jgqed"]
+[ext_resource type="PackedScene" uid="uid://dy3odl2ppa6xd" path="res://assets/sections/westFieldSE.tscn" id="36_0e0cl"]
+[ext_resource type="PackedScene" uid="uid://dfjdhdxlb8i25" path="res://assets/sections/ironMine.tscn" id="37_frpkf"]
+[ext_resource type="PackedScene" uid="uid://1c30xbtqd4od" path="res://assets/sections/ironWarzone.tscn" id="37_nnadl"]
+[ext_resource type="PackedScene" uid="uid://jokiuck6gepb" path="res://assets/sections/ironRoadW.tscn" id="39_7jyqt"]
+[ext_resource type="PackedScene" uid="uid://dl8nedbc71r1w" path="res://assets/sections/northFarm.tscn" id="40_ejs48"]
+[ext_resource type="PackedScene" uid="uid://caggr8dq0hhb1" path="res://assets/sections/westField.tscn" id="41_wa1mo"]
+[ext_resource type="PackedScene" uid="uid://tru3o12ipoaj" path="res://assets/sections/westFarm.tscn" id="42_2s7my"]
+[ext_resource type="PackedScene" uid="uid://dfnp4xoqya38g" path="res://interactables/Player.tscn" id="42_bhtve"]
+[ext_resource type="PackedScene" uid="uid://dx2ysxer6bu6y" path="res://assets/sections/northFarmRoad.tscn" id="43_0noey"]
+[ext_resource type="PackedScene" uid="uid://b3rd6yn66ublm" path="res://assets/sections/ironField.tscn" id="44_m5ej6"]
+[ext_resource type="PackedScene" uid="uid://crer6y82tlmht" path="res://assets/sections/quarry.tscn" id="45_ewh7n"]
+[ext_resource type="PackedScene" uid="uid://bdp3es4dv1smb" path="res://assets/sections/westFarmRoad.tscn" id="46_kplqq"]
+[ext_resource type="PackedScene" uid="uid://lf5dy6mjvdkv" path="res://assets/sections/dawipad.tscn" id="47_fuk7n"]
+[ext_resource type="PackedScene" uid="uid://peoneelqby5s" path="res://assets/sections/westFarmField.tscn" id="48_67yx7"]
+[ext_resource type="PackedScene" uid="uid://cylko338phavr" path="res://assets/sections/northWarzone.tscn" id="49_8rptv"]
+[ext_resource type="PackedScene" uid="uid://cg0kw8v0klwmf" path="res://assets/sections/nIboanLake.tscn" id="50_18pyg"]
+[ext_resource type="PackedScene" uid="uid://bkavlwptmr3h7" path="res://assets/sections/iboanLake.tscn" id="51_0m5df"]
+[ext_resource type="PackedScene" uid="uid://b4dyh383n22ei" path="res://assets/sections/eIboanLake.tscn" id="52_6qcoh"]
+[ext_resource type="PackedScene" uid="uid://dqyq7l86wftmy" path="res://assets/sections/saltMine.tscn" id="53_qq8st"]
+[ext_resource type="PackedScene" uid="uid://chb5dsr7pqoos" path="res://assets/sections/saltCoast.tscn" id="54_s880f"]
+[ext_resource type="PackedScene" uid="uid://dscgrpk274gcb" path="res://assets/sections/galanset.tscn" id="55_qqkxc"]
+[ext_resource type="PackedScene" uid="uid://cvcbafmmk846c" path="res://assets/sections/galansetCoast.tscn" id="56_22lbn"]
+[ext_resource type="PackedScene" uid="uid://dqxagirb4ujfu" path="res://assets/sections/coastEstate.tscn" id="57_37j7i"]
+[ext_resource type="PackedScene" uid="uid://cembxj6ufh1b5" path="res://assets/sections/estateCoast.tscn" id="58_ipkkl"]
+[ext_resource type="PackedScene" uid="uid://bt5koek5yoanj" path="res://assets/sections/coastFort.tscn" id="59_nndeq"]
+[ext_resource type="PackedScene" uid="uid://c566iuwoi17gb" path="res://assets/sections/fortCoast.tscn" id="60_bepe2"]
+[ext_resource type="PackedScene" uid="uid://c41ot32y8c860" path="res://assets/sections/coast.tscn" id="61_6tvvf"]
+[ext_resource type="PackedScene" uid="uid://dxgaxs3p1wobm" path="res://assets/sections/terlayanEstate.tscn" id="62_xkijy"]
+[ext_resource type="PackedScene" uid="uid://bf6fgjfqndjya" path="res://assets/sections/terlayanFort.tscn" id="63_yqblj"]
+[ext_resource type="PackedScene" uid="uid://dd5yp6qtpt2nl" path="res://assets/sections/southCoastN.tscn" id="64_rdwfw"]
+[ext_resource type="PackedScene" uid="uid://b3cupf3mommt1" path="res://assets/sections/southCoastS.tscn" id="65_g75lr"]
+[ext_resource type="PackedScene" uid="uid://6akygqwr8b0n" path="res://assets/sections/southCoast.tscn" id="66_73807"]
+[ext_resource type="PackedScene" uid="uid://drif632meu014" path="res://assets/sections/garrison.tscn" id="67_xb43o"]
+[ext_resource type="PackedScene" uid="uid://co7sh4sbrcxyy" path="res://assets/sections/ruin.tscn" id="68_e8tkd"]
+[ext_resource type="PackedScene" uid="uid://moasxr861mlk" path="res://assets/sections/iboanLakeField.tscn" id="69_ljpua"]
+[ext_resource type="PackedScene" uid="uid://crwewwf5ldygo" path="res://assets/sections/ironRoad.tscn" id="70_tvsc2"]
+[ext_resource type="PackedScene" uid="uid://2w5e80fkpxpl" path="res://assets/sections/estateRoad.tscn" id="71_7umcw"]
+[ext_resource type="PackedScene" uid="uid://dssniadncgiw" path="res://assets/sections/saltField.tscn" id="72_216kw"]
+[ext_resource type="PackedScene" uid="uid://c6fkewxlsj2j" path="res://assets/sections/galansetField.tscn" id="73_vgjkj"]
+[ext_resource type="PackedScene" uid="uid://dinsmrk6lu7il" path="res://assets/sections/galansetFort.tscn" id="74_qt4lr"]
+[ext_resource type="PackedScene" uid="uid://dc8b2nlm5np6n" path="res://assets/sections/galansetRoad.tscn" id="75_fe48y"]
+[ext_resource type="PackedScene" uid="uid://csh1r387nb1gj" path="res://assets/sections/cave.tscn" id="76_55yft"]
+[ext_resource type="PackedScene" uid="uid://c5vpl4k57oedq" path="res://assets/sections/ironBridge.tscn" id="77_vwjje"]
+[ext_resource type="PackedScene" uid="uid://bsot3vomqahii" path="res://assets/sections/dawipadRoad.tscn" id="78_ovtui"]
+[ext_resource type="PackedScene" uid="uid://o6ou8ecjoxps" path="res://assets/sections/estate.tscn" id="79_3bxqr"]
+[ext_resource type="PackedScene" uid="uid://d1rwkrmskfiyh" path="res://assets/sections/estateField.tscn" id="80_86wah"]
+[ext_resource type="PackedScene" uid="uid://b7n1xp5nxgu1v" path="res://assets/sections/southCheckpoint.tscn" id="80_k2fla"]
+[ext_resource type="PackedScene" uid="uid://dj4a2okksrmyq" path="res://assets/sections/wDawipad.tscn" id="81_o7j34"]
+[ext_resource type="PackedScene" uid="uid://71itjyqd4w3i" path="res://assets/sections/eDawipad.tscn" id="83_t47qd"]
+[ext_resource type="PackedScene" uid="uid://qbvoxpbbvmns" path="res://assets/sections/southField.tscn" id="84_rgigu"]
+[ext_resource type="PackedScene" uid="uid://c0unwvq0ru4f0" path="res://assets/sections/dawipadFarmRoadE.tscn" id="85_csmta"]
+[ext_resource type="PackedScene" uid="uid://bxlfqnujrnnsu" path="res://assets/sections/dawipadFarmRoadN.tscn" id="86_rqhst"]
+[ext_resource type="PackedScene" uid="uid://ceryn7ucfah2x" path="res://assets/sections/dawipadFarmE.tscn" id="87_j2cxy"]
+[ext_resource type="PackedScene" uid="uid://d2hffxtoop8xo" path="res://assets/sections/dawipadMine.tscn" id="88_n3k6e"]
+[ext_resource type="PackedScene" uid="uid://cktug5v35sw3i" path="res://assets/sections/university.tscn" id="89_5i76m"]
+[ext_resource type="PackedScene" uid="uid://bnnpl7ulq1o7b" path="res://assets/sections/wDawipadField.tscn" id="90_4vgjj"]
+[ext_resource type="PackedScene" uid="uid://kit8t2t0n0sh" path="res://assets/sections/dawipadFarmN.tscn" id="91_01tgo"]
+[ext_resource type="PackedScene" uid="uid://b5ikqk3dmqde6" path="res://assets/sections/dawipadFarmNFieldW.tscn" id="92_sb66i"]
+[ext_resource type="PackedScene" uid="uid://bqvxl8wsinf3x" path="res://assets/sections/dawipadFarmNFieldN.tscn" id="93_n32n0"]
+[ext_resource type="PackedScene" uid="uid://4fxj67s430yl" path="res://assets/sections/dawipadMineField.tscn" id="94_qtgke"]
+[ext_resource type="PackedScene" uid="uid://dxs0xiav5sy2p" path="res://assets/sections/coastEstateField.tscn" id="95_c2sy2"]
+[ext_resource type="PackedScene" uid="uid://dd4tr6xi21jv" path="res://assets/sections/coal.tscn" id="96_72k5u"]
+[ext_resource type="PackedScene" uid="uid://bxcl5vpen3nqj" path="res://assets/sections/galansetFarm.tscn" id="97_igbed"]
+[ext_resource type="PackedScene" uid="uid://bigi28wd6bsi" path="res://assets/sections/galansetFarmRoad.tscn" id="98_bbgaq"]
+[ext_resource type="PackedScene" uid="uid://buyppw1ne1tps" path="res://assets/sections/coastFortRoad.tscn" id="99_23egl"]
+[ext_resource type="PackedScene" uid="uid://wyf1flyhncqs" path="res://assets/sections/universityFarm.tscn" id="100_43yww"]
+[ext_resource type="PackedScene" uid="uid://db3w4ucgwfkmy" path="res://assets/sections/universityFarmField.tscn" id="101_52n1q"]
+[ext_resource type="PackedScene" uid="uid://c7iowcrpqye4s" path="res://assets/sections/terlayanEstateField.tscn" id="102_ao5lu"]
+[ext_resource type="PackedScene" uid="uid://cb1hicwdyw4nv" path="res://assets/sections/dawipadFarmSRoad.tscn" id="103_j4veq"]
+[ext_resource type="PackedScene" uid="uid://7uxcdc7vqq13" path="res://assets/sections/dawipadFarmS.tscn" id="104_1riac"]
+[ext_resource type="PackedScene" uid="uid://dmqmq48cxu8ug" path="res://assets/sections/dawipadFarmSField.tscn" id="105_soaru"]
+[ext_resource type="PackedScene" uid="uid://de2a8p0effp5p" path="res://assets/sections/checkpointField.tscn" id="106_tsdde"]
+[ext_resource type="PackedScene" uid="uid://gf6c5yi8phv3" path="res://assets/sections/dawipadField.tscn" id="107_foflq"]
+[ext_resource type="PackedScene" uid="uid://dorit1w86ny7o" path="res://assets/sections/riverField.tscn" id="108_y02vy"]
+[ext_resource type="PackedScene" uid="uid://bhhh53jyrfwmb" path="res://assets/sections/dawipadHut.tscn" id="109_cjf8h"]
+[ext_resource type="PackedScene" uid="uid://c2toy4oqu5ysy" path="res://assets/sections/terlayanFortField.tscn" id="110_hkmpk"]
+[ext_resource type="PackedScene" uid="uid://gs62wqf5ovmr" path="res://assets/sections/dawipadFarmEField.tscn" id="111_lklv6"]
+[ext_resource type="PackedScene" uid="uid://bcf17vka31t8f" path="res://assets/sections/coastField.tscn" id="112_vpxeg"]
+[ext_resource type="PackedScene" uid="uid://3kpt4h7ho504" path="res://assets/sections/southCoastField.tscn" id="113_h5253"]
+[ext_resource type="PackedScene" uid="uid://ct42jk70vkoyy" path="res://assets/sections/southCoastWField.tscn" id="114_hhn1l"]
+[ext_resource type="PackedScene" uid="uid://c40hjyr6igia4" path="res://assets/sections/DawipadFarmESField.tscn" id="115_eksv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0sx"]
+size = Vector2(939, 16785)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iaay2"]
+size = Vector2(20733, 903)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pi2a"]
+size = Vector2(25240, 905)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_careu"]
+size = Vector2(1982, 1094)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h443y"]
+size = Vector2(1138.25, 1123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urrwh"]
+size = Vector2(4018, 2252)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ai3rf"]
+size = Vector2(738, 1790)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgytw"]
+size = Vector2(589, 2523)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hujls"]
+size = Vector2(1236, 1140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83ynl"]
+size = Vector2(964, 2368)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcnlu"]
+size = Vector2(690, 5747)
+
+[node name="FlatMap" type="Node2D"]
+
+[node name="sections" type="Node2D" parent="."]
+
+[node name="GenesisForest" parent="sections" instance=ExtResource("1_0bal6")]
+
+[node name="Ews" parent="sections" instance=ExtResource("2_ie17l")]
+position = Vector2(0, 1600)
+
+[node name="NwCodetenWoods" parent="sections" instance=ExtResource("3_iebcr")]
+position = Vector2(2272, 0)
+
+[node name="NCodetenForestry" parent="sections" instance=ExtResource("4_ly2ub")]
+position = Vector2(3680, 0)
+
+[node name="EwsForest" parent="sections" instance=ExtResource("5_nmw40")]
+position = Vector2(2272, 2144)
+
+[node name="WCodetenWoods" parent="sections" instance=ExtResource("6_5ewu3")]
+position = Vector2(0, 3136)
+
+[node name="WCodetenForestry" parent="sections" instance=ExtResource("7_ujo5p")]
+position = Vector2(2272, 3744)
+
+[node name="SwCodetenWoods" parent="sections" instance=ExtResource("8_qckn8")]
+position = Vector2(0, 4768)
+
+[node name="WCodeten" parent="sections" instance=ExtResource("9_x5can")]
+position = Vector2(3744, 3744)
+
+[node name="NCodetenWoods" parent="sections" instance=ExtResource("10_0jee3")]
+position = Vector2(4256, 2144)
+
+[node name="NeCodetenWoods" parent="sections" instance=ExtResource("11_eay80")]
+position = Vector2(5312, 0)
+
+[node name="Codeten" parent="sections" instance=ExtResource("12_v25ee")]
+position = Vector2(5056, 3744)
+
+[node name="SCodeten" parent="sections" instance=ExtResource("13_dlqm6")]
+position = Vector2(3744, 5440)
+
+[node name="BigWoods" parent="sections" instance=ExtResource("14_wrxcu")]
+position = Vector2(0, 6368)
+
+[node name="WCodetenRoad" parent="sections" instance=ExtResource("15_3g80k")]
+position = Vector2(6144, 2144)
+
+[node name="SCodetenForestry" parent="sections" instance=ExtResource("16_joqtr")]
+position = Vector2(3040, 6368)
+
+[node name="NForestEdge" parent="sections" instance=ExtResource("17_7hcwf")]
+position = Vector2(6912, 0)
+
+[node name="CodetenRoad" parent="sections" instance=ExtResource("18_sg3lt")]
+position = Vector2(7648, 2144)
+
+[node name="ForestEdge" parent="sections" instance=ExtResource("19_t7g2q")]
+position = Vector2(6144, 4320)
+
+[node name="IronForestEdge" parent="sections" instance=ExtResource("20_560wu")]
+position = Vector2(5312, 6368)
+
+[node name="SCodetenWoods" parent="sections" instance=ExtResource("21_475sr")]
+position = Vector2(3040, 8000)
+
+[node name="BulgeWoods" parent="sections" instance=ExtResource("22_pbxp6")]
+position = Vector2(3040, 9600)
+
+[node name="ForestWizardWoods" parent="sections" instance=ExtResource("23_b2m1r")]
+position = Vector2(1344, 8832)
+
+[node name="ForestWizard" parent="sections" instance=ExtResource("24_bct8w")]
+position = Vector2(0, 8832)
+
+[node name="SForestEdge" parent="sections" instance=ExtResource("25_rmbox")]
+position = Vector2(1344, 10080)
+
+[node name="WizardForestEdge" parent="sections" instance=ExtResource("26_a1wq3")]
+position = Vector2(0, 10720)
+
+[node name="CornerNField" parent="sections" instance=ExtResource("27_f85aj")]
+position = Vector2(0, 12096)
+
+[node name="CornerSField" parent="sections" instance=ExtResource("28_h1q75")]
+position = Vector2(0, 13504)
+
+[node name="WestFieldN" parent="sections" instance=ExtResource("29_kg56u")]
+position = Vector2(5312, 8768)
+
+[node name="WestFieldNc" parent="sections" instance=ExtResource("30_3ln0c")]
+position = Vector2(5312, 10912)
+
+[node name="WestFieldW" parent="sections" instance=ExtResource("31_22jsd")]
+position = Vector2(3040, 11584)
+
+[node name="WizardField" parent="sections" instance=ExtResource("32_uo101")]
+position = Vector2(3040, 12799)
+
+[node name="PlainsWizard" parent="sections" instance=ExtResource("33_ebe6k")]
+position = Vector2(4384, 12800)
+
+[node name="WestFieldS" parent="sections" instance=ExtResource("34_3wcbv")]
+position = Vector2(3040, 14047)
+
+[node name="WestFieldSW" parent="sections" instance=ExtResource("35_jgqed")]
+position = Vector2(5248, 14048)
+
+[node name="WestFieldSe" parent="sections" instance=ExtResource("36_0e0cl")]
+position = Vector2(7296, 14048)
+
+[node name="IronWarzone" parent="sections" instance=ExtResource("37_nnadl")]
+position = Vector2(6368, 10208)
+
+[node name="IronMine" parent="sections" instance=ExtResource("37_frpkf")]
+position = Vector2(6368, 8768)
+
+[node name="IronField" parent="sections" instance=ExtResource("44_m5ej6")]
+position = Vector2(7392, 7808)
+
+[node name="IronRoadW" parent="sections" instance=ExtResource("39_7jyqt")]
+position = Vector2(8224, 8768)
+
+[node name="NorthFarm" parent="sections" instance=ExtResource("40_ejs48")]
+position = Vector2(8544, 0)
+
+[node name="WestField" parent="sections" instance=ExtResource("41_wa1mo")]
+position = Vector2(6368, 12128)
+
+[node name="WestFarm" parent="sections" instance=ExtResource("42_2s7my")]
+position = Vector2(7392, 6368)
+
+[node name="NorthFarmRoad" parent="sections" instance=ExtResource("43_0noey")]
+position = Vector2(10560, 0)
+
+[node name="Quarry" parent="sections" instance=ExtResource("45_ewh7n")]
+position = Vector2(9248, 2144)
+
+[node name="WestFarmRoad" parent="sections" instance=ExtResource("46_kplqq")]
+position = Vector2(8768, 4320)
+
+[node name="Dawipad" parent="sections" instance=ExtResource("47_fuk7n")]
+position = Vector2(15360, 10592)
+
+[node name="WestFarmField" parent="sections" instance=ExtResource("48_67yx7")]
+position = Vector2(9408, 6368)
+
+[node name="NorthWarzone" parent="sections" instance=ExtResource("49_8rptv")]
+position = Vector2(12928, 0)
+
+[node name="NIboanLake" parent="sections" instance=ExtResource("50_18pyg")]
+position = Vector2(10944, 2144)
+
+[node name="EIboanLake" parent="sections" instance=ExtResource("52_6qcoh")]
+position = Vector2(13408, 3008)
+
+[node name="IboanLake" parent="sections" instance=ExtResource("51_0m5df")]
+position = Vector2(10944, 3008)
+
+[node name="SaltMine" parent="sections" instance=ExtResource("53_qq8st")]
+position = Vector2(18208, 0)
+
+[node name="SaltCoast" parent="sections" instance=ExtResource("54_s880f")]
+position = Vector2(19200, 704)
+
+[node name="Galanset" parent="sections" instance=ExtResource("55_qqkxc")]
+position = Vector2(18208, 1536)
+
+[node name="GalansetCoast" parent="sections" instance=ExtResource("56_22lbn")]
+position = Vector2(19936, 1536)
+
+[node name="CoastEstate" parent="sections" instance=ExtResource("57_37j7i")]
+position = Vector2(20352, 3552)
+
+[node name="EstateCoast" parent="sections" instance=ExtResource("58_ipkkl")]
+position = Vector2(21952, 3552)
+
+[node name="CoastFort" parent="sections" instance=ExtResource("59_nndeq")]
+position = Vector2(22624, 4736)
+
+[node name="FortCoast" parent="sections" instance=ExtResource("60_bepe2")]
+position = Vector2(22624, 5728)
+
+[node name="Coast" parent="sections" instance=ExtResource("61_6tvvf")]
+position = Vector2(22880, 7072)
+
+[node name="TerlayanEstate" parent="sections" instance=ExtResource("62_xkijy")]
+position = Vector2(20928, 8064)
+
+[node name="TerlayanFort" parent="sections" instance=ExtResource("63_yqblj")]
+position = Vector2(20928, 8992)
+
+[node name="SouthCoastN" parent="sections" instance=ExtResource("64_rdwfw")]
+position = Vector2(22592, 10432)
+
+[node name="SouthCoastS" parent="sections" instance=ExtResource("65_g75lr")]
+position = Vector2(22112, 13536)
+
+[node name="SouthCoast" parent="sections" instance=ExtResource("66_73807")]
+position = Vector2(22592, 12160)
+
+[node name="Garrison" parent="sections" instance=ExtResource("67_xb43o")]
+position = Vector2(10944, 5856)
+
+[node name="Ruin" parent="sections" instance=ExtResource("68_e8tkd")]
+position = Vector2(10944, 7392)
+
+[node name="IboanLakeField" parent="sections" instance=ExtResource("69_ljpua")]
+position = Vector2(14048, 2144)
+
+[node name="IronRoad" parent="sections" instance=ExtResource("70_tvsc2")]
+position = Vector2(9408, 8288)
+
+[node name="EstateRoad" parent="sections" instance=ExtResource("71_7umcw")]
+position = Vector2(9408, 9568)
+
+[node name="SaltField" parent="sections" instance=ExtResource("72_216kw")]
+position = Vector2(15520, 0)
+
+[node name="GalansetField" parent="sections" instance=ExtResource("73_vgjkj")]
+position = Vector2(15520, 1152)
+
+[node name="GalansetFort" parent="sections" instance=ExtResource("74_qt4lr")]
+position = Vector2(14688, 3008)
+
+[node name="GalansetRoad" parent="sections" instance=ExtResource("75_fe48y")]
+position = Vector2(16736, 3008)
+
+[node name="Cave" parent="sections" instance=ExtResource("76_55yft")]
+position = Vector2(11776, 7392)
+
+[node name="IronBridge" parent="sections" instance=ExtResource("77_vwjje")]
+position = Vector2(11776, 8992)
+
+[node name="DawipadRoad" parent="sections" instance=ExtResource("78_ovtui")]
+position = Vector2(11776, 10592)
+
+[node name="Estate" parent="sections" instance=ExtResource("79_3bxqr")]
+position = Vector2(10976, 11456)
+
+[node name="EstateField" parent="sections" instance=ExtResource("80_86wah")]
+position = Vector2(9408, 11456)
+
+[node name="SouthCheckpoint" parent="sections" instance=ExtResource("80_k2fla")]
+position = Vector2(11744, 13536)
+
+[node name="WDawipad" parent="sections" instance=ExtResource("81_o7j34")]
+position = Vector2(13536, 10592)
+
+[node name="EDawipad" parent="sections" instance=ExtResource("83_t47qd")]
+position = Vector2(16512, 10592)
+
+[node name="SouthField" parent="sections" instance=ExtResource("84_rgigu")]
+position = Vector2(9408, 13536)
+
+[node name="DawipadFarmRoadE" parent="sections" instance=ExtResource("85_csmta")]
+position = Vector2(17824, 8992)
+
+[node name="DawipadFarmRoadN" parent="sections" instance=ExtResource("86_rqhst")]
+position = Vector2(14976, 8992)
+
+[node name="DawipadFarmE" parent="sections" instance=ExtResource("87_j2cxy")]
+position = Vector2(19200, 9600)
+
+[node name="DawipadMine" parent="sections" instance=ExtResource("88_n3k6e")]
+position = Vector2(16800, 8992)
+
+[node name="University" parent="sections" instance=ExtResource("89_5i76m")]
+position = Vector2(19200, 8064)
+
+[node name="WDawipadField" parent="sections" instance=ExtResource("90_4vgjj")]
+position = Vector2(12832, 8992)
+
+[node name="DawipadFarmN" parent="sections" instance=ExtResource("91_01tgo")]
+position = Vector2(15392, 7392)
+
+[node name="DawipadFarmNFieldW" parent="sections" instance=ExtResource("92_sb66i")]
+position = Vector2(13632, 7392)
+
+[node name="DawipadFarmNFieldN" parent="sections" instance=ExtResource("93_n32n0")]
+position = Vector2(14688, 5088)
+
+[node name="DawipadMineField" parent="sections" instance=ExtResource("94_qtgke")]
+position = Vector2(17184, 7392)
+
+[node name="CoastEstateField" parent="sections" instance=ExtResource("95_c2sy2")]
+position = Vector2(18208, 3552)
+
+[node name="Coal" parent="sections" instance=ExtResource("96_72k5u")]
+position = Vector2(18208, 4736)
+
+[node name="GalansetFarm" parent="sections" instance=ExtResource("97_igbed")]
+position = Vector2(16736, 5792)
+
+[node name="GalansetFarmRoad" parent="sections" instance=ExtResource("98_bbgaq")]
+position = Vector2(16736, 4256)
+
+[node name="CoastFortRoad" parent="sections" instance=ExtResource("99_23egl")]
+position = Vector2(20832, 4736)
+
+[node name="UniversityFarm" parent="sections" instance=ExtResource("100_43yww")]
+position = Vector2(19200, 7072)
+
+[node name="UniversityFarmField" parent="sections" instance=ExtResource("101_52n1q")]
+position = Vector2(19200, 5792)
+
+[node name="TerlayanEstateField" parent="sections" instance=ExtResource("102_ao5lu")]
+position = Vector2(21376, 7072)
+
+[node name="DawipadFarmSRoad" parent="sections" instance=ExtResource("103_j4veq")]
+position = Vector2(16032, 12384)
+
+[node name="DawipadFarmS" parent="sections" instance=ExtResource("104_1riac")]
+position = Vector2(14752, 13536)
+
+[node name="DawipadFarmSField" parent="sections" instance=ExtResource("105_soaru")]
+position = Vector2(16544, 13536)
+
+[node name="CheckpointField" parent="sections" instance=ExtResource("106_tsdde")]
+position = Vector2(13440, 13536)
+
+[node name="DawipadField" parent="sections" instance=ExtResource("107_foflq")]
+position = Vector2(14176, 11456)
+
+[node name="RiverField" parent="sections" instance=ExtResource("108_y02vy")]
+position = Vector2(12736, 11456)
+
+[node name="DawipadHut" parent="sections" instance=ExtResource("109_cjf8h")]
+position = Vector2(14176, 12384)
+
+[node name="TerlayanFortField" parent="sections" instance=ExtResource("110_hkmpk")]
+position = Vector2(20928, 10432)
+
+[node name="DawipadFarmEField" parent="sections" instance=ExtResource("111_lklv6")]
+position = Vector2(17824, 11200)
+
+[node name="CoastField" parent="sections" instance=ExtResource("112_vpxeg")]
+position = Vector2(20928, 11456)
+
+[node name="SouthCoastField" parent="sections" instance=ExtResource("113_h5253")]
+position = Vector2(20384, 13536)
+
+[node name="SouthCoastWField" parent="sections" instance=ExtResource("114_hhn1l")]
+position = Vector2(18496, 13536)
+
+[node name="DawipadFarmEsField" parent="sections" instance=ExtResource("115_eksv0")]
+position = Vector2(19200, 12192)
+
+[node name="Player" parent="." instance=ExtResource("42_bhtve")]
+position = Vector2(18696, 2120)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
+zoom = Vector2(3, 3)
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="WestWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(-469.5, 7489.5)
+shape = SubResource("RectangleShape2D_3m0sx")
+
+[node name="NorthWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(9591.5, -451.5)
+shape = SubResource("RectangleShape2D_iaay2")
+
+[node name="SouthWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(11681, 15524.5)
+shape = SubResource("RectangleShape2D_5pi2a")
+
+[node name="EastWall1" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(20191, 157)
+shape = SubResource("RectangleShape2D_careu")
+
+[node name="EastWall3" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(21176.9, 974.5)
+shape = SubResource("RectangleShape2D_h443y")
+
+[node name="EastWall5" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(23225, 2426)
+shape = SubResource("RectangleShape2D_urrwh")
+
+[node name="EastWall7" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(25201, 3841)
+shape = SubResource("RectangleShape2D_ai3rf")
+
+[node name="EastWall9" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(25478.5, 5914.5)
+shape = SubResource("RectangleShape2D_dgytw")
+
+[node name="EastWall11" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(24938, 7642)
+shape = SubResource("RectangleShape2D_hujls")
+
+[node name="EastWall13" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(24098, 9248)
+shape = SubResource("RectangleShape2D_83ynl")
+
+[node name="EastWall15" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(24217, 13103.5)
+shape = SubResource("RectangleShape2D_vcnlu")

@@ -279,7 +279,6 @@ animations = [{
 size = Vector2(8, 8)
 
 [node name="Player" type="RigidBody2D"]
-z_index = 400
 y_sort_enabled = true
 physics_material_override = ExtResource("1_3372m")
 gravity_scale = 0.0
@@ -293,12 +292,10 @@ shape = SubResource("CircleShape2D_klf0c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_c21d8")
-animation = &"idle"
-frame = 1
-frame_progress = 0.398769
+animation = &"walkdown"
 
-[node name="playerHitbox" type="Area2D" parent="."]
+[node name="hitbox" type="Area2D" parent="."]
 
-[node name="hitboxshape" type="CollisionShape2D" parent="playerHitbox"]
+[node name="hitboxshape" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_2tmbu")

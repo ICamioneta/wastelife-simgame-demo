@@ -1,33 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfw7650klv2oj"]
+[gd_scene load_steps=6 format=3 uid="uid://dfw7650klv2oj"]
 
 [ext_resource type="Script" path="res://script/door.cs" id="1_wewy5"]
 [ext_resource type="SpriteFrames" uid="uid://3a04645s5v4g" path="res://assets/sprites/fancydoorspriteframes.tres" id="2_b5jot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gs0f"]
-size = Vector2(16, 4)
+size = Vector2(16, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy7r0"]
-size = Vector2(16, 17)
+size = Vector2(16, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhinm"]
+size = Vector2(16, 4)
 
 [node name="Door" type="StaticBody2D"]
-y_sort_enabled = true
 script = ExtResource("1_wewy5")
 
 [node name="doorCollision" type="CollisionShape2D" parent="."]
+visible = false
 z_index = 1
-position = Vector2(16, 31)
+position = Vector2(16, 30.5)
 shape = SubResource("RectangleShape2D_4gs0f")
 
-[node name="ActivationArea" type="Area2D" parent="."]
+[node name="ActivationInside" type="Area2D" parent="."]
+visible = false
 
-[node name="ActivationShape" type="CollisionShape2D" parent="ActivationArea"]
+[node name="ActivationShape" type="CollisionShape2D" parent="ActivationInside"]
 z_index = 1
-position = Vector2(16, 27.5)
+position = Vector2(16, 24)
 shape = SubResource("RectangleShape2D_uy7r0")
 
+[node name="ActivationOutside" type="Area2D" parent="."]
+visible = false
+
+[node name="ActivationShape" type="CollisionShape2D" parent="ActivationOutside"]
+z_index = 1
+position = Vector2(16, 34)
+shape = SubResource("RectangleShape2D_fhinm")
+
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-z_index = 300
-z_as_relative = false
 y_sort_enabled = true
 position = Vector2(16, 16)
 sprite_frames = ExtResource("2_b5jot")

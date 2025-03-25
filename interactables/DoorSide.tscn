@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c72wnf4f7pwtj"]
+[gd_scene load_steps=6 format=3 uid="uid://c72wnf4f7pwtj"]
 
 [ext_resource type="Script" path="res://script/door.cs" id="1_6nnbp"]
+[ext_resource type="SpriteFrames" uid="uid://ddf4e14s58rgr" path="res://interactables/fancydoorside.tres" id="2_ef8yg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gs0f"]
 size = Vector2(3, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy7r0"]
-size = Vector2(21, 17)
+size = Vector2(12, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6nes"]
+size = Vector2(6, 17)
 
 [node name="Door" type="StaticBody2D"]
 script = ExtResource("1_6nnbp")
@@ -15,12 +19,19 @@ script = ExtResource("1_6nnbp")
 position = Vector2(3.5, 19.5)
 shape = SubResource("RectangleShape2D_4gs0f")
 
-[node name="ActivationArea" type="Area2D" parent="."]
+[node name="ActivationInside" type="Area2D" parent="."]
 
-[node name="ActivationShape" type="CollisionShape2D" parent="ActivationArea"]
-position = Vector2(6.5, 19.5)
+[node name="ActivationShape" type="CollisionShape2D" parent="ActivationInside"]
+position = Vector2(11, 19.5)
 shape = SubResource("RectangleShape2D_uy7r0")
+
+[node name="ActivationOutside" type="Area2D" parent="."]
+
+[node name="ActivationShape" type="CollisionShape2D" parent="ActivationOutside"]
+position = Vector2(-1, 19.5)
+shape = SubResource("RectangleShape2D_p6nes")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(16, 16)
-animation = &""
+sprite_frames = ExtResource("2_ef8yg")
+animation = &"open"

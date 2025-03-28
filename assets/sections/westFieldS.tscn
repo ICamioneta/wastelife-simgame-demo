@@ -5,11 +5,11 @@
 
 [node name="WestFieldS" type="Node2D"]
 script = ExtResource("1_4vegm")
-nameID = "westfields"
-width = 69
-height = 32
-x = 159
-y = 439
+NameID = "WestFieldS"
+Width = 69
+Height = 32
+X = 95
+Y = 439
 
 [node name="ground" type="Node2D" parent="."]
 

@@ -5,9 +5,10 @@
 
 [node name="NCodetenForestry" type="Node2D"]
 script = ExtResource("1_4w33a")
-width = 51
-height = 67
-x = 115
+NameID = "NCodetenForestry"
+Width = 51
+Height = 67
+X = 115
 
 [node name="ground" type="Node2D" parent="."]
 

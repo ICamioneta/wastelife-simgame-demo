@@ -5,11 +5,11 @@
 
 [node name="Quarry" type="Node2D"]
 script = ExtResource("1_os6qr")
-nameID = "quarry"
-width = 53
-height = 68
-x = 289
-y = 67
+NameID = "Quarry"
+Width = 53
+Height = 68
+X = 289
+Y = 67
 
 [node name="ground" type="Node2D" parent="."]
 

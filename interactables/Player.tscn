@@ -153,7 +153,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walkdown",
-"speed": 8.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -286,6 +286,7 @@ lock_rotation = true
 script = ExtResource("1_d8ll4")
 
 [node name="base" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_klf0c")
 
@@ -295,6 +296,7 @@ sprite_frames = SubResource("SpriteFrames_c21d8")
 animation = &"walkdown"
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="hitboxshape" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, 9)

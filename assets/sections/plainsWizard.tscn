@@ -5,10 +5,11 @@
 
 [node name="PlainsWizard" type="Node2D"]
 script = ExtResource("1_i6bf6")
-width = 62
-height = 39
-x = 137
-y = 400
+NameID = "PlainsWizard"
+Width = 62
+Height = 39
+X = 137
+Y = 400
 
 [node name="ground" type="Node2D" parent="."]
 

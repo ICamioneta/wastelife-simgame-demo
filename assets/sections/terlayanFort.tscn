@@ -5,11 +5,11 @@
 
 [node name="TerlayanFort" type="Node2D"]
 script = ExtResource("1_e5gym")
-nameID = "terlayanfort"
-width = 84
-height = 45
-x = 654
-y = 281
+NameID = "TerlayanFort"
+Width = 84
+Height = 45
+X = 654
+Y = 281
 
 [node name="ground" type="Node2D" parent="."]
 

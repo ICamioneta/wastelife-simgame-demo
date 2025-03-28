@@ -5,11 +5,11 @@
 
 [node name="CoastEstate" type="Node2D"]
 script = ExtResource("1_cn0s3")
-nameID = "coastestate"
-width = 50
-height = 37
-x = 636
-y = 111
+NameID = "CoastEstate"
+Width = 50
+Height = 37
+X = 636
+Y = 111
 
 [node name="ground" type="Node2D" parent="."]
 

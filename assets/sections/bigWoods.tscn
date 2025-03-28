@@ -5,10 +5,10 @@
 
 [node name="BigWoods" type="Node2D"]
 script = ExtResource("1_w0eqo")
-nameID = "bigwoods"
-width = 95
-height = 77
-y = 199
+NameID = "BigWoods"
+Width = 95
+Height = 77
+Y = 199
 
 [node name="ground" type="Node2D" parent="."]
 

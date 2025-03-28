@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://script/MapSection.cs" id="1_ygiqu"]
 [ext_resource type="TileSet" uid="uid://2ohva2vfmcv1" path="res://assets/tilesets/outside.tres" id="2_tfkvn"]
 
-[node name="NeCodetenWoods" type="Node2D"]
+[node name="NECodetenWoods" type="Node2D"]
 script = ExtResource("1_ygiqu")
-nameID = "necodetenwoods"
-width = 50
-height = 67
-x = 166
+NameID = "NECodetenWoods"
+Width = 50
+Height = 67
+X = 166
 
 [node name="ground" type="Node2D" parent="."]
 

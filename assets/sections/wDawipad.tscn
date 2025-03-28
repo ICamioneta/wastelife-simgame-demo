@@ -5,10 +5,11 @@
 
 [node name="WDawipad" type="Node2D"]
 script = ExtResource("1_4a4u8")
-width = 57
-height = 27
-x = 423
-y = 331
+NameID = "WDawipad"
+Width = 57
+Height = 27
+X = 423
+Y = 331
 
 [node name="ground" type="Node2D" parent="."]
 

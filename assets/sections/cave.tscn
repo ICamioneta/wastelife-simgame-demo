@@ -5,10 +5,11 @@
 
 [node name="Cave" type="Node2D"]
 script = ExtResource("1_l7ndl")
-width = 58
-height = 50
-x = 368
-y = 231
+NameID = "Cave"
+Width = 58
+Height = 50
+X = 368
+Y = 231
 
 [node name="ground" type="Node2D" parent="."]
 

@@ -5,11 +5,11 @@
 
 [node name="EstateField" type="Node2D"]
 script = ExtResource("1_eeheg")
-nameID = "estatefield"
-width = 49
-height = 65
-x = 294
-y = 358
+NameID = "EstateField"
+Width = 49
+Height = 65
+X = 294
+Y = 358
 
 [node name="ground" type="Node2D" parent="."]
 

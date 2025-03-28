@@ -5,11 +5,11 @@
 
 [node name="GalansetFarm" type="Node2D"]
 script = ExtResource("1_sona5")
-nameID = "galansetfarm"
-width = 77
-height = 50
-x = 523
-y = 181
+NameID = "GalansetFarm"
+Width = 77
+Height = 50
+X = 523
+Y = 181
 
 [node name="ground" type="Node2D" parent="."]
 

@@ -5,10 +5,11 @@
 
 [node name="DawipadFarmE" type="Node2D"]
 script = ExtResource("1_a3wjl")
-width = 54
-height = 81
-x = 600
-y = 300
+NameID = "DawipadFarmE"
+Width = 54
+Height = 81
+X = 600
+Y = 300
 
 [node name="ground" type="Node2D" parent="."]
 

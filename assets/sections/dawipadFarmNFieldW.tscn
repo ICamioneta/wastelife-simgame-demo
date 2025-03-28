@@ -5,11 +5,11 @@
 
 [node name="DawipadFarmNFieldW" type="Node2D"]
 script = ExtResource("1_eklpg")
-nameID = "dawipadfarmnfieldw"
-width = 55
-height = 50
-x = 426
-y = 231
+NameID = "DawipadFarmNFieldW"
+Width = 55
+Height = 50
+X = 426
+Y = 231
 
 [node name="ground" type="Node2D" parent="."]
 

@@ -5,11 +5,11 @@
 
 [node name="CoastFort" type="Node2D"]
 script = ExtResource("1_af4tf")
-nameID = "coastfort"
-width = 80
-height = 31
-x = 707
-y = 148
+NameID = "CoastFort"
+Width = 80
+Height = 31
+X = 707
+Y = 148
 
 [node name="ground" type="Node2D" parent="."]
 

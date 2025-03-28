@@ -5,11 +5,11 @@
 
 [node name="CheckpointField" type="Node2D"]
 script = ExtResource("1_ls0sl")
-nameID = "checkpointfield"
-width = 41
-height = 48
-x = 420
-y = 423
+NameID = "CheckpointField"
+Width = 41
+Height = 48
+X = 420
+Y = 423
 
 [node name="ground" type="Node2D" parent="."]
 

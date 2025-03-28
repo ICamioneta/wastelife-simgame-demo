@@ -5,11 +5,11 @@
 
 [node name="RiverField" type="Node2D"]
 script = ExtResource("1_jqbx6")
-nameID = "riverfield"
-width = 45
-height = 65
-x = 398
-y = 358
+NameID = "RiverField"
+Width = 45
+Height = 65
+X = 398
+Y = 358
 
 [node name="ground" type="Node2D" parent="."]
 

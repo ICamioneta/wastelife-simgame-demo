@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dnbcl7708xwp8"
+
+[deps]
+
+files=["res://MapSectionData.Width.translation", "res://MapSectionData.Height.translation", "res://MapSectionData.X.translation", "res://MapSectionData.Y.translation"]
+
+source_file="res://MapSectionData.csv"
+dest_files=["res://MapSectionData.Width.translation", "res://MapSectionData.Height.translation", "res://MapSectionData.X.translation", "res://MapSectionData.Y.translation"]
+
+[params]
+
+compress=true
+delimiter=0

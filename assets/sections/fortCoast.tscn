@@ -5,11 +5,11 @@
 
 [node name="FortCoast" type="Node2D"]
 script = ExtResource("1_s52ce")
-nameID = "fortcoast"
-width = 80
-height = 42
-x = 707
-y = 179
+NameID = "FortCoast"
+Width = 80
+Height = 42
+X = 707
+Y = 179
 
 [node name="ground" type="Node2D" parent="."]
 

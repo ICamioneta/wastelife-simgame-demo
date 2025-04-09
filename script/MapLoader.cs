@@ -92,12 +92,9 @@ public partial class MapLoader : Node
 		}
 		return null;
 	}
-
-	
-
 	
 	// takes grid coords
-	public MapSection GetSectionAt(int gridX, int gridY)
+	public MapSection GetSectionAt(int gridX, int gridY, bool report)
 	{
 		int cellX = gridX / CellSize,
 			cellY = gridY / CellSize;
@@ -107,20 +104,19 @@ public partial class MapLoader : Node
 			foreach (MapSection section in sections)
 			{
 				int secX = section.X, secY = section.Y;
-				int secMaxX = secX + section.Width, secMaxY = secY + section.Height;
+				int secMaxX = secX + section.Width - 1, secMaxY = secY + section.Height - 1;
 			
-				if (gridX > secX && gridX < secMaxX && gridY > secY && gridY < secMaxY)
+				if (gridX >= secX && gridX <= secMaxX && gridY >= secY && gridY <= secMaxY)
 				{ 
-					GD.Print($"Got section {section.NameID} at ({gridX}, {gridY})");
+					if (report) GD.Print($"Got section {section.NameID} at ({gridX}, {gridY})");
 					return section;
 				}
 			}
 		}
-		
-
-		GD.Print($"No section found for {gridX},{gridY}");
+		if (report) GD.Print($"No section found for {gridX},{gridY}");
 		return null;
 	}
+	public MapSection GetSectionAt(int x, int y) => GetSectionAt(x, y, true);
 	
 	// Function version for unmodified x,y coords.
 	public MapSection GetSectionAt(Vector2 v) 
@@ -163,50 +159,52 @@ public partial class MapLoader : Node
 	private List<MapSection> FindNeighbours(MapSection section)
 	{
 		List<MapSection> neighbours = new();
-		int x = (int)section.X / MapSection.TileResolution,
-			y = (int)section.Y / MapSection.TileResolution;
+		int x = (int)section.X,
+			y = (int)section.Y;
+		
+		GD.Print($"scanning for {section.NameID}, from x={x-1}, y={y-1} to {x + section.Width} {y + section.Height}");
 		
 		// Scan top edge, includes diagonal adjacency but this shouldn't matter with my tile layout
 		for (int i = x - 1; i < x + section.Width + 1; i++)
 		{
-			var neighbour = GetSectionAt(i, y - 1);
+			var neighbour = GetSectionAt(i, y - 1, false);
 			if (neighbour != null && !neighbours.Contains(neighbour))
 			{
+				GD.Print($"Found neighbour {neighbour.NameID} at {i}, {y-1}");
 				neighbours.Add(neighbour);
-				i += neighbour.Width;
 			}
 		}
 		
-		// Left edge
-		for (int i = y - 1; i < y - 1; i++)
-		{
-			var neighbour = GetSectionAt(x - 1, i);
-			if (neighbour != null && !neighbours.Contains(neighbour))
-			{
-				neighbours.Add(neighbour);
-				i += neighbour.Height;
-			}
-		}
-		
-		// Right edge
+		// Left edge (from top to bottom)
 		for (int i = y - 1; i < y + section.Height + 1; i++)
 		{
-			var neighbour = GetSectionAt(x + section.Width + 1, i);
+			var neighbour = GetSectionAt(x - 1, i, false);
 			if (neighbour != null && !neighbours.Contains(neighbour))
 			{
+				GD.Print($"Found neighbour {neighbour.NameID} at {x-1}, {i}");
 				neighbours.Add(neighbour);
-				i += neighbour.Height;
+			}
+		}
+		
+		// Right edge (top to bottom)
+		for (int i = y - 1; i < y + section.Height + 1; i++)
+		{
+			var neighbour = GetSectionAt(x + section.Width + 1, i, false);
+			if (neighbour != null && !neighbours.Contains(neighbour))
+			{
+				GD.Print($"Found neighbour {neighbour.NameID} at {x + section.Width + 1}, {i}");
+				neighbours.Add(neighbour);
 			}
 		}
 		
 		// Bottom edge
-		for (int i = x - 1; i < y + section.Height + 1; i++)
+		for (int i = x - 1; i < x + section.Width + 1; i++)
 		{
-			var neighbour = GetSectionAt(i, y + section.Height + 1);
+			var neighbour = GetSectionAt(i, y + section.Height + 1, false);
 			if (neighbour != null && !neighbours.Contains(neighbour))
 			{
+				GD.Print($"Found neighbour {neighbour.NameID} at {i}, {y + section.Height + 1}");
 				neighbours.Add(neighbour);
-				i += neighbour.Width;
 			}
 		}
 		

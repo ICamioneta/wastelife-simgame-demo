@@ -40,8 +40,16 @@ public partial class Stairs : Node2D
 		// Layer numbers work as an 8 bit array, so a value of 4 is 00000100, activating only the third layer.
 		// This system is brilliant if you're not using layers as floors, like I am, since it makes no sense to be on several floors at once.
 		// I say that, this system is quite convenient for A.I. vision on lower floors, i think.
+
+		Area2D hitbox;
 		
-		Area2D hitbox = body.GetNode<Area2D>("hitbox");
+		hitbox = body.GetNode<Area2D>("Hitbox");
+		if (hitbox == null) hitbox = body.GetNode<Area2D>("PlayerHitbox");
+		if (hitbox == null)
+		{
+			GD.Print($"SetLayers tried to get a hit box but no valid hitbox names: {body.Name}");
+		}
+		
 		
 		GD.Print($"SetLayers: {layer} on {body.Name} and {hitbox.Name}");
 		

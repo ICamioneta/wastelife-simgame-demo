@@ -3,7 +3,7 @@ using System;
 
 public partial class playermove : RigidBody2D
 {
-	public int speed = 50;
+	public int speed = 150;
 	int accel = 5;
 	private AnimatedSprite2D sprite;
 	// Called when the node enters the scene tree for the first time.	

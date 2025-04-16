@@ -24,7 +24,7 @@ public partial class building : Node2D
 		door.EnteredInside += ShowFloor0;
 		door.EnteredOutside += ShowExterior;
 
-		if (stairs0 != null) stairs0.LayerChanged += LayerChange;
+		if (stairs0 != null) stairs0.PlayerLayerChanged += LayerChange;
 		
 		// establish visibility
 		buildingExterior.Visible = true;

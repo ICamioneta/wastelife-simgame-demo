@@ -284,6 +284,7 @@ physics_material_override = ExtResource("1_3372m")
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_d8ll4")
+speed = 150
 
 [node name="base" type="CollisionShape2D" parent="."]
 visible = false

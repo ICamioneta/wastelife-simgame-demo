@@ -3,8 +3,10 @@ using System;
 
 public partial class playermove : RigidBody2D
 {
-	public int speed = 150;
-	int accel = 5;
+	[Export]
+	int speed = 50;
+	[Export]
+	int acceleration = 5;
 	private AnimatedSprite2D sprite;
 	// Called when the node enters the scene tree for the first time.	
 	public override void _Ready()
@@ -45,7 +47,7 @@ public partial class playermove : RigidBody2D
 
 		// Calculate the force needed to reach the target velocity
 		Vector2 currentVelocity = state.LinearVelocity;
-		Vector2 force = (targetVelocity - currentVelocity) * accel;
+		Vector2 force = (targetVelocity - currentVelocity) * acceleration;
 
 		// Apply the force to the body
 		state.ApplyForce(force);

@@ -55,29 +55,40 @@ public partial class door : StaticBody2D
 				ToggleDoor();
 			}
 		}
-		
 	}
 	
 	private void OnInsideAreaEntered(Area2D area)
 	{
-		insideInteractable = true;
-		EmitSignal(SignalName.EnteredInside);
+		if (area.Name == "PlayerHitbox")
+		{
+			insideInteractable = true;
+			EmitSignal(SignalName.EnteredInside);
+		}
 	}
 	private void OnInsideAreaExited(Area2D area)
 	{
-		insideInteractable = false;
-		EmitSignal(SignalName.ExitedInside);
+		if (area.Name == "PlayerHitbox")
+		{
+			insideInteractable = false;
+			EmitSignal(SignalName.ExitedInside);
+		}
 	}	
 	private void OnOutsideAreaEntered(Area2D area)
 	{
-		outsideInteractable = true;
-		EmitSignal(SignalName.EnteredOutside);
+		if (area.Name == "PlayerHitbox")
+		{
+			outsideInteractable = true;
+			EmitSignal(SignalName.EnteredOutside);
+		}
 	}
 	
 	private void OnOutsideAreaExited(Area2D area)
 	{
-		outsideInteractable = false;
-		EmitSignal(SignalName.ExitedOutside);
+		if (area.Name == "PlayerHitbox")
+		{
+			outsideInteractable = false;
+			EmitSignal(SignalName.ExitedOutside);
+		}
 	}
 
 	private void ToggleDoor()

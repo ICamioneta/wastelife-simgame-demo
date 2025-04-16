@@ -9,8 +9,11 @@ public partial class Stairs : Node2D
 
 	private Area2D bottomArea, topArea;
 	
+	// Player layer changed signal is to notify the building class to change what layers are being shown.
 	[Signal]
-	public delegate void LayerChangedEventHandler(int floorNumber);
+	public delegate void PlayerLayerChangedEventHandler(int floorNumber);
+
+	[Export] private bool debug = false;
 	
 	public override void _Ready()
 	{
@@ -30,7 +33,7 @@ public partial class Stairs : Node2D
 	// oh no, stairs logic!!
 	private bool IsMovingLeft(RigidBody2D body)
 	{
-		GD.Print(body.GetLinearVelocity().X);
+		if (debug) GD.Print(body.GetLinearVelocity().X);
 		if (body.GetLinearVelocity().X < 0) return true;
 		return false;
 	}
@@ -43,15 +46,15 @@ public partial class Stairs : Node2D
 
 		Area2D hitbox;
 		
-		hitbox = body.GetNode<Area2D>("Hitbox");
+		hitbox = body.GetNodeOrNull<Area2D>("Hitbox");
 		if (hitbox == null) hitbox = body.GetNode<Area2D>("PlayerHitbox");
 		if (hitbox == null)
 		{
-			GD.Print($"SetLayers tried to get a hit box but no valid hitbox names: {body.Name}");
+			if (debug) GD.Print($"SetLayers tried to get a hit box but no valid hitbox names: {body.Name}");
 		}
 		
 		
-		GD.Print($"SetLayers: {layer} on {body.Name} and {hitbox.Name}");
+		if (debug) GD.Print($"SetLayers: {layer} on {body.Name} and {hitbox.Name}");
 		
 		body.SetCollisionLayer(layer);
 		hitbox.SetCollisionLayer(layer);
@@ -62,7 +65,9 @@ public partial class Stairs : Node2D
 	
 	private void OnBottomEnter(Area2D area)
 	{
-		GD.Print("OnBottomEnter");
+		bool isPlayer = area.Name == "PlayerHitbox";
+		
+		if (debug) GD.Print("OnBottomEnter");
 		RigidBody2D body = null;
 		try
 		{
@@ -75,19 +80,21 @@ public partial class Stairs : Node2D
 			else
 			{
 				SetLayers(2, body); // put on stairs layer
-				EmitSignal(SignalName.LayerChanged, 2);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 2);
 			}
 		}
 		catch // this is _not_ an error
 		{
-			GD.Print($"area {area.Name} has entered stairs collider but is not attached to a rigid body");
+			if (debug) GD.Print($"area {area.Name} has entered stairs collider but is not attached to a rigid body");
 		}
 		
 	}
 
 	private void OnBottomExit(Area2D area)
 	{
-		GD.Print("OnBottomExit");
+		bool isPlayer = area.Name == "PlayerHitbox";
+		if (debug) GD.Print("OnBottomExit");
 		RigidBody2D body = null;
 		try
 		{
@@ -96,23 +103,26 @@ public partial class Stairs : Node2D
 			if ( IsMovingLeft(body) )
 			{
 				SetLayers(1, body); // ground layer
-				EmitSignal(SignalName.LayerChanged, 1);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 1);
 			}
 			else
 			{
 				SetLayers(2, body); // put on stairs layer, should already be here from OnBottomEnter ??
-				EmitSignal(SignalName.LayerChanged, 2);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 2);
 			}
 		}
 		catch // this is _not_ an error
 		{
-			GD.Print($"area {area.Name} has exited stairs collider but is not attached to a rigid body");
+			if (debug) GD.Print($"area {area.Name} has exited stairs collider but is not attached to a rigid body");
 		}
 	}
 
 	private void OnTopEnter(Area2D area)
 	{
-		GD.Print("OnTopEnter");
+		bool isPlayer = area.Name == "PlayerHitbox";
+		if (debug) GD.Print("OnTopEnter");
 		RigidBody2D body = null;
 		try
 		{
@@ -121,7 +131,8 @@ public partial class Stairs : Node2D
 			if ( IsMovingLeft(body) )
 			{
 				SetLayers(2, body); // put on stairs layer
-				EmitSignal(SignalName.LayerChanged, 2);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 2);
 			}
 			else
 			{
@@ -129,13 +140,14 @@ public partial class Stairs : Node2D
 		}
 		catch // this is _not_ an error
 		{
-			GD.Print($"area {area.Name} has entered stairs collider but is not attached to a rigid body");
+			if (debug) GD.Print($"area {area.Name} has entered stairs collider but is not attached to a rigid body");
 		}
 	}
 
 	private void OnTopExit(Area2D area)
 	{
-		GD.Print("OnTopExit");
+		bool isPlayer = area.Name == "PlayerHitbox";
+		if (debug) GD.Print("OnTopExit");
 		RigidBody2D body = null;
 		try
 		{
@@ -144,17 +156,19 @@ public partial class Stairs : Node2D
 			if ( IsMovingLeft(body) )
 			{
 				SetLayers(2, body); // shuold already be here
-				EmitSignal(SignalName.LayerChanged, 2);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 2);
 			}
 			else
 			{
 				SetLayers(4, body); // put on floor 1 layer
-				EmitSignal(SignalName.LayerChanged, 4);
+				if (isPlayer)
+					EmitSignal(SignalName.PlayerLayerChanged, 4);
 			}
 		}
 		catch // this is _not_ an error
 		{
-			GD.Print($"area {area.Name} has exited stairs collider but is not attached to a rigid body");
+			if (debug) GD.Print($"area {area.Name} has exited stairs collider but is not attached to a rigid body");
 		}
 	}
 	

@@ -37,6 +37,7 @@ size = Vector2(3, 148.375)
 script = ExtResource("5_g5n7i")
 
 [node name="Floor0" type="Node2D" parent="."]
+z_index = -2
 position = Vector2(0, -96)
 
 [node name="Floor0Base" type="TileMapLayer" parent="Floor0"]
@@ -59,6 +60,7 @@ position = Vector2(-2, 28)
 DoorAnimation = ExtResource("4_qqfpf")
 
 [node name="Floor1" type="Node2D" parent="."]
+z_index = -2
 position = Vector2(0, -96)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Floor1"]
@@ -66,7 +68,6 @@ tile_map_data = PackedByteArray("AAAAAAgAAAAAAAQAAAABAAgAAAAAAAQAAAACAAgAAAAAAAQ
 tile_set = ExtResource("2_os8oc")
 
 [node name="BuildingExterior" type="Node2D" parent="."]
-visible = false
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(1, -95)
@@ -126,6 +127,7 @@ position = Vector2(112, 94.75)
 shape = SubResource("RectangleShape2D_d1cdq")
 
 [node name="Floor1Collision" type="StaticBody2D" parent="."]
+visible = false
 z_index = 500
 z_as_relative = false
 position = Vector2(0, -128)

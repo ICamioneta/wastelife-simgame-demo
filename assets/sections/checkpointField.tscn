@@ -27,3 +27,5 @@ visible = false
 [node name="AreaShape" type="CollisionShape2D" parent="Area"]
 position = Vector2(656, 768)
 shape = SubResource("RectangleShape2D_e1nrf")
+
+[node name="objects" type="Node2D" parent="."]

@@ -37,6 +37,7 @@ size = Vector2(690, 5747)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_v0g00")
+intiialPlayerPosition = Vector2(15360, 10592)
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 
